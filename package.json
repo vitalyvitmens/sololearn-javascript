@@ -1,0 +1,23 @@
+{
+  "name": "sololearn-javascript",
+  "version": "1.0.0",
+  "description": "Sololearn JavaScript course",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "node",
+    "js"
+  ],
+  "author": "vitalyvitmens <vitalyvitmens@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
