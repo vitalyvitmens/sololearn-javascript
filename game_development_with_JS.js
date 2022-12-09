@@ -449,5 +449,63 @@ This is some text
 // Чтобы обработать событие нажатия кнопки в JavaScript, нам сначала нужно получить ссылку на нее, используя ее идентификатор:
 // Функция document.getElementById() позволяет вам выбрать элемент HTML, используя его атрибут id.
 // Теперь btn — это переменная, которая ссылается на кнопку.
-let btn = document.getElementById('myButton')
-alert('JavaScript подключен!')
+// let btn = document.getElementById('myButton')
+// alert('JavaScript подключен!')
+
+//TODO: Events (События)
+// Теперь, когда у нас есть кнопка в JavaScript, мы можем установить для события onclick желаемую функцию:
+// Это вызовет функцию hello(), когда пользователь нажмет кнопку.
+// Обратите внимание, что скобки в этом случае не нужны.
+// function hello() {
+//   alert('Hello')
+// }
+// window.onload = function () {
+//   let btn = document.getElementById('myButton')
+//   btn.onclick = hello
+// }
+
+//TODO: Events (События)
+// Вот список общих событий:
+// См. Рис: Picture/Events.png
+
+//TODO: Events (События)
+// Еще один важный шаг — убедиться, что документ загрузился, прежде чем использовать ссылку на элемент в JavaScript.
+// Это можно сделать с помощью события onload окна:
+// Обработчик события должен быть функцией, поэтому используется ключевое слово function.
+// Обычной практикой является использование события window.onload для выполнения JavaScript.
+// function hello() {
+//   alert('Hello')
+// }
+// window.onload = function () {
+//   let btn = document.getElementById('myButton')
+//   btn.onclick = hello
+// }
+
+//TODO: Events (События)
+// Давайте воспользуемся полученными знаниями для создания очень простой программы, похожей на игру. Мы объявим переменную здоровья и инициализируем ее значением 100. Каждый раз, когда нажимается кнопка Hit, значение здоровья будет делиться пополам и выводиться на консоль. Когда здоровье достигнет 1, мы предупредим «Игра окончена». Мы уже видели HTML-код кнопки, поэтому давайте перейдем к JavaScript:
+// Как только страница загружена, мы берем ссылку на кнопку и вызываем функцию hit() при ее нажатии.
+// window.onload = function () {
+//   let btn = document.getElementById('myButton')
+//   btn.onclick = hit
+// }
+
+// let health = 100
+
+//TODO: Events (События)
+// Пришло время сделать функцию hit():
+// Каждый раз, когда вызывается функция hit(), она обновляет значение переменной здоровья, проверяет, меньше ли оно 1, и выводит соответствующие сообщения.
+window.onload = function () {
+  let btn = document.getElementById('myButton')
+  btn.onclick = hit
+}
+
+let health = 100
+
+function hit() {
+  health = health / 2
+  if (health <= 1) {
+    alert('Game Over!')
+  } else {
+    console.log(health)
+  }
+}
