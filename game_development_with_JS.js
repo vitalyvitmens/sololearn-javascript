@@ -753,10 +753,161 @@ window.onload = function () {
 // Теперь, когда мы знаем, как сделать дугу, мы можем сделать полный круг.
 // Для этого начальный угол должен быть равен 0, а конечный угол должен быть равен 360°, что составляет 2*PI радиан.
 // Круг будет центрирован в центре холста. Поскольку размер холста 600x400, его центр находится в точке (300, 200).
+// window.onload = function () {
+//   var canvas = document.getElementById('canvas')
+//   var context = canvas.getContext('2d')
+
+//   context.arc(300, 200, 100, 0, 2 * Math.PI)
+//   // context.moveTo(200, 200)
+//   // context.lineTo(400, 200)
+//   // context.moveTo(300, 100)
+//   // context.lineTo(300, 300)
+//   context.stroke()
+// }
+
+// TODO: Practice: Rectangles & Circles (Практика: прямоугольники и круги)
+// Пришло время продолжить наш проект! Но сначала повторим, как нарисовать круг.
+// 1. Функция arc() используется для рисования круга. Он имеет 5 обязательных параметров — координаты, представляющие центр дуги, радиус и начало/конец дуги в радианах.
+// 2. Мы можем вычислять углы с помощью радианов и математической константы PI — используйте Math.Pi.
+// window.onload = function () {
+//   var canvas = document.getElementById('canvas')
+//   var context = canvas.getContext('2d')
+
+//   context.arc(300, 200, 100, 0, 2 * Math.PI)
+//   context.stroke()
+// }
+
+// TODO: Drawing on Canvas (Рисунок на холсте)
+// Ты отлично справляешься!
+// Давайте нарисуем красный круг на нашем холсте!
+// Задачи:
+// 1. Возьмите ссылку на холст с помощью JavaScript.
+// 2. Добавьте переменные x и y, чтобы определить, где должен быть нарисован круг. Инициализируйте его по центру нижней части холста (x = 300; y = 350).
+// 3. Нарисуйте красный круг размером 50.
+// Подсказки: рисование круга выполняется с помощью функции дуги контекста.
+// window.onload = function () {
+//   let btn = document.getElementById('jump')
+//   let count = 0
+//   var canvas = document.getElementById('canvas')
+//   var context = canvas.getContext('2d')
+//   var x = 300
+//   var y = 350
+
+//   context.arc(x, y, 50, 0, 2 * Math.PI)
+//   context.fillStyle = 'red'
+//   context.fill()
+
+//   btn.onclick = function () {
+//     count += 1
+//     alert(count)
+//   }
+// }
+
+// TODO: Styles (Стили)
+// Все фигуры, которые мы нарисовали, имели только тонкий черный контур.
+// Это стиль функции stroke() по умолчанию. Мы можем установить цвет и ширину обводки, используя свойства strokeStyle и lineWidth. Например:
+// В результате получится прямоугольник с красным контуром 10 пикселей.
+// window.onload = function () {
+//   var canvas = document.getElementById('canvas')
+//   var context = canvas.getContext('2d')
+
+//   context.rect(50, 50, 200, 150)
+//   context.lineWidth = 10
+//   context.strokeStyle = 'red'
+//   context.stroke()
+// }
+
+// TODO: Styles (Стили)
+// Чтобы добавить цвет заливки к нашим фигурам, нам нужно использовать функцию fillStyle().
+// Например, давайте покрасим внутреннюю часть нашего прямоугольника в желтый цвет:
+// Подобно рисованию stroke(), нам нужно вызвать функцию fill(), чтобы заполнить фигуру указанным цветом.
+// window.onload = function () {
+//   var canvas = document.getElementById('canvas')
+//   var context = canvas.getContext('2d')
+
+//   context.rect(50, 50, 200, 150)
+
+//   context.fillStyle = 'yellow'
+//   context.fill()
+
+//   context.lineWidth = 10
+//   context.strokeStyle = 'red'
+//   context.stroke()
+
+//   // context.moveTo(50, 50)
+//   // context.lineTo(250, 200)
+//   // context.strokeStyle = 'black'
+//   // context.lineWidth = 1
+//   // context.stroke()
+// }
+
+// TODO: Styles (Стили)
+// Вот полный код для рисования прямоугольника и указания стилей его контура и заливки:
+// Рекомендуется использовать функцию fill() перед функцией stroke(), чтобы правильно отобразить обводку.
+// window.onload = function () {
+//   var canvas = document.getElementById('canvas')
+//   var context = canvas.getContext('2d')
+
+//   context.rect(50, 50, 200, 150)
+
+//   context.fillStyle = 'green'
+//   context.fill()
+
+//   context.lineWidth = 10
+//   context.strokeStyle = 'red'
+//   context.stroke()
+// }
+
+// TODO: HTML Colors (Цвета HTML)
+// В предыдущих примерах мы задавали цвета, используя их имена.
+// Функции fillStyle () и strokeStyle() также могут использовать шестнадцатеричные коды цветов.
+// Например:
+// Шестнадцатеричный цвет определяется как: # RRGGBB, где RR (красный), GG (зеленый) и BB (синий) — шестнадцатеричные целые числа от 00 до FF , определяющие интенсивность цвета.
+// Например, #FF0000 отображается красным цветом, потому что для красного компонента установлено максимальное значение (FF), а для остальных установлено значение 00.
+// window.onload = function () {
+//   var canvas = document.getElementById('canvas')
+//   var context = canvas.getContext('2d')
+
+//   context.rect(50, 50, 200, 150)
+
+//   context.fillStyle = '#5e9860'
+//   context.fill()
+
+//   context.lineWidth = 10
+//   context.strokeStyle = '#af1f1f'
+//   context.stroke()
+// }
+
+// TODO: Styles (Стили)
+// Те же функции fillStyle() и strokeStyle() можно использовать с кругами и другими фигурами.
+// Сделаем в центре холста красный шар с серым контуром:
 window.onload = function () {
   var canvas = document.getElementById('canvas')
   var context = canvas.getContext('2d')
 
   context.arc(300, 200, 100, 0, 2 * Math.PI)
+
+  context.fillStyle = '#de4646'
+  context.fill()
+
+  context.lineWidth = 6
+  context.strokeStyle = '#505050'
   context.stroke()
+}
+
+// TODO: Multiple Shapes (Несколько фигур)
+// В случае, если нам нужно нарисовать несколько фигур, нам нужно использовать функцию beginPath() перед каждой фигурой. Например, нарисуем круг и прямоугольник:
+window.onload = function () {
+  var canvas = document.getElementById('canvas')
+  var context = canvas.getContext('2d')
+
+  context.beginPath()
+  context.rect(50, 50, 300, 200)
+  context.fillStyle = '#1775b7'
+  context.fill()
+
+  context.beginPath()
+  context.arc(300, 200, 100, 0, 2 * Math.PI)
+  context.fillStyle = '#de4646'
+  context.fill()
 }
