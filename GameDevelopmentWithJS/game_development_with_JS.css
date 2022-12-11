@@ -141,7 +141,145 @@ canvas {
 } */
 
 /* TODO: Multiple Shapes (Несколько форм) */
-#canvas {
+/* #canvas {
   width: 100%;
   border: 1px solid black;
+} */
+
+/* TODO: Drawing Text (Рисуем текст) */
+/* #canvas {
+  width: 100%;
+  border: 1px solid black;
+} */
+
+/* TODO: Images (Картинки) */
+/* #canvas {
+  width: 100%;
+  border: 1px solid black;
+} */
+
+/* TODO: Images (Картинки) */
+/* #canvas {
+  width: 100%;
+  border: 1px solid black;
+} */
+
+/* TODO: Animations (Анимации) */
+/* #canvas {
+  width: 100%;
+  border: 1px solid black;
+} */
+
+/* TODO: Practice: Animations (Практика: Анимации) */
+/* #canvas {
+  width: 100%;
+  border: 1px solid black;
+} */
+
+/* TODO: Practice: Animation (Практика: Анимация) */
+/* body {
+  background-color: #c3c3c3;
+}
+
+h1 {
+  color: #4c6ebb;
+}
+
+canvas {
+  width: 100%;
+  background-color: black;
+} */
+
+/* TODO: Game Loops (Игровые циклы) */
+/* #canvas {
+  width: 100%;
+  border: 1px solid black;
+} */
+
+/* TODO: Frame Rate (Частота кадров) */
+/* #canvas {
+  width: 100%;
+  border: 1px solid black;
+} */
+
+/* TODO: Frame Rates (Частота кадров) */
+/* #canvas {
+  width: 100%;
+  border: 1px solid black;
+} */
+
+/* TODO: Collision Detection (Обнаружение столкновений) */
+/* #canvas {
+  width: 100%;
+  border: 1px solid black;
+} */
+
+/* TODO: Practice: Collision Detection (Практика: обнаружение столкновений) */
+/* #canvas {
+  width: 100%;
+  border: 1px solid black;
+} */
+
+/* TODO: Practice: Game Loop (Практика: Игровые циклы) */
+/* body {
+  background-color: #c3c3c3;
+}
+
+h1 {
+  color: #4c6ebb;
+}
+
+canvas {
+  width: 100%;
+  background-color: black;
+} */
+
+/* TODO: User Input (Пользовательский ввод) */
+/* #canvas {
+  width: 100%;
+  border: 1px solid black;
+}
+button {
+  width: 50px;
+  height: 30px;
+  margin-bottom: 5px;
+} */
+
+/* TODO: Practice: User Input (Практика: пользовательский ввод) */
+/* body {
+  background-color: #c3c3c3;
+}
+
+h1 {
+  color: #4c6ebb;
+}
+
+canvas {
+  width: 100%;
+  background-color: black;
+} */
+
+/* TODO: Coin Collector (Коллекционер монет) */
+/* #canvas {
+  width: 100%;
+  border: 1px solid black;
+}
+button {
+  width: 50px;
+  height: 30px;
+  margin-bottom: 5px;
+} */
+
+/* TODO: Practice: Adding Gravity (Практика: Добавление гравитации) */
+body {
+  background-color: #c3c3c3;
+}
+
+h1 {
+  color: #4c6ebb;
+}
+
+canvas {
+  width: 100%;
+  background-color: black;
 }
