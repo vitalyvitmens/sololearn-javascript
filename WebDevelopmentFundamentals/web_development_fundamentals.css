@@ -1,0 +1,110 @@
+/* Rules & Selectors (Правила и селекторы) */
+/* p {
+  color: red;
+} */
+
+/* TODO: Selectors (Селекторы) */
+/* p {
+  color: red;
+}  */
+
+/* TODO: Selectors (Селекторы) */
+/* p {
+  color: green;
+} */
+
+/* TODO: Multiple Selectors (Несколько селекторов) */
+/* h1,
+p {
+  color: red;
+} */
+
+/* TODO: Class Selector (Выбор класса) */
+/* .intro {
+  color: red;
+  background-color: yellow;
+} */
+
+/* TODO: Selectors (Селекторы) */
+/* #intro {
+  color: red;
+  background-color: yellow;
+} */
+
+/* TODO: Selectors (Селекторы) */
+/* li strong {
+  color: purple;
+} */
+
+/* TODO: Style Inheritance (Наследование стиля) */
+/* header {
+  color: red;
+  font-size: 24px;
+} */
+
+/* TODO: Practice: CSS Selectors (Практика: CSS Селекторы) */
+/* footer {
+  color: #595959;
+}
+
+p strong {
+  color: #2493df;
+} */
+
+/* TODO: Styling Text (Стилизация текста) */
+/* .intro {
+  color: red;
+} */
+
+/* TODO: Color Values (Цветовые значения) */
+/* .intro {
+  color: #47759b;
+} */
+
+/* TODO: Color Values (Цветовые значения) */
+/* .intro {
+  color: rgb(71, 117, 155);
+} */
+
+/* TODO: Font Size (Размер шрифта) */
+/* .intro {
+  font-size: 32px;
+} */
+
+/* TODO: Font Family (Семейство шрифтов) */
+/* .intro {
+  font-family: Arial;
+} */
+
+/* TODO: Fonts (Шрифты) */
+/* .intro {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+} */
+
+/* TODO: font-style (стиль шрифта) */
+/* .intro {
+  font-style: italic;
+  color: red;
+  font-size: 32px;
+} */
+
+/* TODO: font-weight (вес шрифта) */
+/* .intro {
+  font-weight: 900;
+} */
+
+/* TODO: Practice: Styling Text (Практика: Стилизация текста) */
+h1 {
+  font-size: 20px;
+}
+label {
+  font-size: 16px;
+  font-weight: bold;
+}
+footer {
+  color: #595959;
+  font-size: 14px;
+}
+p strong {
+  color: #2493df;
+}
