@@ -277,3 +277,220 @@ p strong {
 section {
   padding: 10px;
 } */
+
+/* TODO: Border (Граница) */
+/* .box {
+  border: 30px groove red;
+  text-align: center;
+  font-size: 50px;
+  margin: 10px;
+} */
+
+/* TODO: Border Radius (Радиус границы) */
+/* .box {
+  border: 3px solid green;
+  border-radius: 1px 10px 10px 10px;
+} */
+
+/* TODO: Background (Фон) */
+/* .box {
+  background-color: blue;
+  height: 100px;
+  padding: 10px;
+  color: white;
+} */
+
+/* TODO: Background Image (Фоновая картинка) */
+/* .box {
+  background-image: url('https://sololearnassets.azureedge.net/sl-logo.png');
+  height: 150px;
+  padding: 10px;
+} */
+
+/* TODO: Background Image (Фоновая картинка) */
+/* .box {
+  background-image: url('https://sololearnassets.azureedge.net/sl-logo.png');
+  background-repeat: repeat-x;
+  height: 150px;
+  padding: 10px;
+} */
+
+/* TODO: Background Image (Фоновая картинка) */
+/* .box {
+  background-image: url('https://sololearnassets.azureedge.net/sl-logo.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 50px;
+  padding: 10px;
+  border: 1px solid black;
+} */
+
+/* TODO: Background Image (Фоновая картинка) */
+/* .box1 {
+  background-image: url('https://sololearnassets.azureedge.net/sl-logo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 150px;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.box2 {
+  background-image: url('https://sololearnassets.azureedge.net/sl-logo.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 150px;
+  padding: 10px;
+  border: 1px solid black;
+} */
+
+/* TODO: Practice: Backgrounds (Практика: Фон) */
+/* h1 {
+  font-size: 20px;
+  letter-spacing: 2px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+label {
+  font-size: 16px;
+  font-weight: bold;
+}
+footer {
+  color: #595959;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}
+p strong {
+  color: #2493df;
+}
+section {
+  padding: 10px;
+  background-color: white;
+}
+body {
+  background-color: #e0e0e0;
+}
+#buy {
+  background-color: #687373;
+  margin-top: 10px;
+  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  color: #fcfcfc;
+} */
+
+/* TODO: Styling Lists (Списки стилей) */
+/* ul {
+  list-style-type: lower-roman;
+} */
+
+/* TODO: Styling Lists (Списки стилей) */
+/* ul {
+  list-style-type: circle;
+  list-style-position: inside;
+} */
+
+/* TODO: Styling Lists (Списки стилей) */
+/* ul {
+  list-style-image: url('https://www.sololearn.com/images/bullet.jpg');
+} */
+
+/* TODO: Styling Lists (Списки стилей) */
+/* ul {
+  list-style: square outside none;
+} */
+
+/* TODO: Styling Links (стилизация ссылок) */
+/* a {
+  color: green;
+} */
+
+/* TODO: Styling Links (стилизация ссылок) */
+/* a {
+  color: green;
+}
+a:hover {
+  background-color: yellow;
+  border: 1px solid black;
+} */
+
+/* TODO: Styling Links (стилизация ссылок) */
+/* a {
+  color: green;
+  text-decoration: underline;
+}
+a:hover {
+  background-color: yellow;
+} */
+
+/* TODO: Styling Links (стилизация ссылок) */
+/* body {
+  margin: 0;
+}
+ul {
+  padding: 0;
+  margin-top: 10px;
+  width: 100%;
+}
+li {
+  display: inline;
+}
+a {
+  outline: none;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 1%;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  width: 31%;
+  color: white;
+  background-color: green;
+}
+a:hover {
+  background: blue;
+} */
+
+/* TODO: Practice: Styling Lists (Практика: Стилизация списков) */
+/* h1 {
+  font-size: 20px;
+  letter-spacing: 2px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+label {
+  font-size: 16px;
+  font-weight: bold;
+}
+footer {
+  color: #595959;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}
+p strong {
+  color: #2493df;
+}
+section {
+  padding: 10px;
+  background-color: white;
+}
+body {
+  background-color: #e0e0e0;
+}
+#buy {
+  background-color: #687373;
+  margin-top: 10px;
+  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  color: #fcfcfc;
+}
+ul {
+  list-style-type: square;
+  list-style-position: inside;
+  list-style-image: none;
+  padding-left: 30px;
+} */
