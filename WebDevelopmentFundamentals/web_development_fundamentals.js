@@ -1811,3 +1811,380 @@ I am 21 years old and live in New York.</p>
 // 2. Измените положение маркеров, чтобы они находились bullets to be inside the items (внутри элементов).
 // 3. Добавьте 30px padding to the left of the list (отступ слева от списка).
 // Подсказка: тип маркированного списка можно изменить с помощью свойства list-style-type, а их положение — с помощью list-style-position.
+
+//TODO: Styling Tables (Таблицы стилей)
+// HTML-таблица по умолчанию выглядит непривлекательно:
+// Запустите код, чтобы увидеть таблицу без каких-либо стилей.
+{
+  /* <table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Amy</td>
+    <td>42</td>
+  </tr>
+  <tr>
+    <td>Bob</td>
+    <td>19</td>
+  </tr>
+</table>  */
+}
+
+//TODO: Styling Tables (Таблицы стилей)
+// Давайте добавим несколько основных стилей в нашу таблицу:
+// Ячейки таблицы имеют интервал между ними по умолчанию, что приводит к появлению двойных границ. Свойство border-collapse задает свертывание границ в одну, благодаря чему таблица выглядит намного лучше.
+{
+  /* <table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Amy</td>
+    <td>42</td>
+  </tr>
+  <tr>
+    <td>Bob</td>
+    <td>19</td>
+  </tr>
+</table>  */
+}
+// table {
+//   border-collapse: collapse;
+//   width: 100%;
+// }
+// td,
+// th {
+//   border: 1px solid black;
+//   text-align: center;
+// }
+
+//TODO: Styling Tables (Таблицы стилей)
+// Мы также можем предоставить некоторые padding (отступы) для ячеек, чтобы дать содержимому некоторое пространство для «breath» (дыхания):
+// Мы также выровняли текст во всех ячейках по центру.
+{
+  /* <table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Amy</td>
+    <td>42</td>
+  </tr>
+  <tr>
+    <td>Bob</td>
+    <td>19</td>
+  </tr>
+</table>  */
+}
+// table {
+//   border-collapse: collapse;
+//   width: 100%;
+// }
+// td, th {
+//   border:1px solid black;
+//   padding: 10px;
+//   text-align: center;
+// }
+
+//TODO: Styling Tables (Таблицы стилей)
+// Теперь мы можем назначить цвет фона для наших ячеек заголовков:
+// Задача: изменить код, чтобы тексты заголовков отображались белыми на черном фоне.
+{
+  /* <table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Amy</td>
+    <td>42</td>
+  </tr>
+  <tr>
+    <td>Bob</td>
+    <td>19</td>
+  </tr>
+</table>  */
+}
+// table {
+//   border-collapse: collapse;
+//   width: 100%;
+// }
+// td, th {
+//   border:1px solid black;
+//   padding: 10px;
+//   text-align: center;
+// }
+// th {
+//   background-color: #d3d3d3;
+// }
+
+//TODO: Styling Tables (Таблицы стилей)
+// Мы можем сделать ряды еще интереснее!
+// CSS предоставляет псевдоселектор nth-child(), который позволяет вам выбирать определенные строки и стилизовать их. Например, мы можем стилизовать 3-ю строку следующим образом:
+// Строки считаются сверху вниз, включая строки заголовков.
+{
+  /* <table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Amy</td>
+    <td>42</td>
+  </tr>
+  <tr>
+    <td>Bob</td>
+    <td>19</td>
+  </tr>
+</table>  */
+}
+// table {
+//   border-collapse: collapse;
+//   width: 100%;
+// }
+// td, th {
+//   border:1px solid black;
+//   padding: 10px;
+//   text-align: center;
+// }
+// th {
+//   background-color: #d3d3d3;
+// }
+// tr:nth-child(3) {
+//   background-color: #b0d1e4;
+// }
+
+//TODO: Styling Tables (Таблицы стилей)
+// Селектор nth-child позволяет вам также определять правила для строк вместо указания числа. Например, мы можем стилизовать нечетные и четные строки отдельно, задав им разные цвета фона:
+// Это автоматически применит назначенные стили к нечетным и четным строкам.
+// Задача: добавить несколько новых строк в таблицу и посмотреть, как они автоматически принимают стиль.
+{
+  /* <table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Amy</td>
+    <td>42</td>
+  </tr>
+  <tr>
+    <td>Bob</td>
+    <td>19</td>
+  </tr>
+  <tr>
+    <td>James</td>
+    <td>24</td>
+  </tr>
+</table>  */
+}
+// table {
+//   border-collapse: collapse;
+//   width: 100%;
+// }
+// td, th {
+//   border:1px solid black;
+//   padding: 10px;
+//   text-align: center;
+// }
+// th {
+//   background-color: #d3d3d3;
+// }
+// tr:nth-child(even) {
+//   background-color: #b0d1e4;
+// }
+// tr:nth-child(odd) {
+//   background-color: #6aabd1;
+// }
+
+//TODO: Practice: Styling Tables (Практика: Таблицы стилей)
+// Пришло время изменить нашу таблицу цен!
+// Задачи:
+// 1. Установите для свойства border-collapse таблицы значение collapse (свернуть), чтобы унифицировать borders (границы).
+// 2. Сделайте borders (границу) ячеек td и th черной, шириной 1px, solid (сплошной) по стилю.
+// 3. Добавьте 10px внутреннего padding (отступа) ко всем ячейкам, включая ячейки header (заголовка) таблицы.
+// 4. Добавьте следующий стиль в ячейки заголовка таблицы: используйте #2493df для background color (цвета фона) и белый цвет для текста.
+// Совет. Чтобы настроить таргетинг как на ячейки таблицы, так и на ячейки заголовка, используйте следующий синтаксис:
+// td, th {
+//   border: 1px solid black;
+//   padding: 10px;
+//  }
+
+//TODO: Styling Forms (Стилизация форм)
+// Давайте возьмем образец формы и добавим к нему стиль.
+// Текстовые поля имеют размер по умолчанию и черную рамку.
+{
+  /* <form>
+  <label for="name">Name: </label>
+  <input type="text" id="name" placeholder="John Smith"> 
+  <br><br>
+  <label for="email">Email: </label>
+  <input type="email" id="email" placeholder="name@domain.com">
+  <br><br>
+  <input type="button" value="Send">
+</form>   */
+}
+
+//TODO: Styling Forms (Стилизация форм)
+// Мы можем добавить стиль к текстовым полям и меткам, выбрав их по имени:
+// Стиль также будет применяться к кнопке, поскольку она также является элементом ввода.
+{
+  /* <form>
+  <label for="name">Name: </label>
+  <input type="text" id="name" placeholder="John Smith"> 
+  <br><br>
+  <label for="email">Email: </label>
+  <input type="email" id="email" placeholder="name@domain.com">
+  <br><br>
+  <input type="button" value="Send">
+</form>  */
+}
+// input {
+//   border:1px solid green;
+//   width:100%;
+//   padding: 5px;
+// }
+// label {
+//   font-weight: bold;
+//   color:green;
+// }
+
+//TODO: Styling Forms (Стилизация форм)
+// Мы можем ориентироваться на элементы ввода по их типу, используя следующий синтаксис:
+// Это применит стиль только к элементам <input type="text"> .
+// Задача: изменить код, чтобы стиль также применялся к входным данным  email type (электронной почты).
+{
+  /* <form>
+  <label for="name">Name: </label>
+  <input type="text" id="name" placeholder="John Smith"> 
+  <br><br>
+  <label for="email">Email: </label>
+  <input type="email" id="email" placeholder="name@domain.com">
+  <br><br>
+  <input type="button" value="Send">
+</form>  */
+}
+// input[type='text'] {
+//   border:1px solid green;
+//   width:100%;
+//   padding: 5px;
+// }
+// label {
+//   font-weight: bold;
+//   color:green;
+// }
+
+//TODO: Styling Forms (Стилизация форм)
+// Мы также можем стилизовать текст внутри текстовых полей, как и любой другой текст.
+// Давайте сделаем его зеленым и жирным:
+{
+  /* <form>
+  <label for="name">Name: </label>
+  <input type="text" id="name" placeholder="John Smith"> 
+  <br><br>
+  <label for="email">Email: </label>
+  <input type="email" id="email" placeholder="name@domain.com">
+  <br><br>
+  <input type="button" value="Send">
+</form>  */
+}
+// input[type='text'], input[type='email'] {
+//   border:1px solid green;
+//   width:100%;
+//   padding: 5px;
+//   color: green;
+//   font-weight: bold;
+// }
+// label {
+//   font-weight: bold;
+//   color:green;
+// }
+
+//TODO: Styling Forms (Стилизация форм)
+// Точно так же мы можем применить стиль к нашей кнопке:
+// Мы использовали border:none , чтобы удалить границу по умолчанию с кнопки.
+{
+  /* <form>
+  <label for="name">Name: </label>
+  <input type="text" id="name" placeholder="John Smith"> 
+  <br><br>
+  <label for="email">Email: </label>
+  <input type="email" id="email" placeholder="name@domain.com">
+  <br><br>
+  <input type="button" value="Send">
+</form>  */
+}
+// input[type='text'], input[type='email'] {
+//   border:1px solid green;
+//   width:100%;
+//   padding: 5px;
+// }
+// label {
+//   font-weight: bold;
+//   color:green;
+// }
+// input[type='button'] {
+//   background-color: green;
+//   border: none;
+//   border-radius: 20px;
+//   padding: 10px 20px;
+//   font-weight: bold;
+//   color: white;
+// }
+
+//TODO: Styling Forms (Стилизация форм)
+// Как и в случае со ссылками, мы можем использовать псевдоселектор :hover для стилизации кнопки при наведении курсора:
+// Теперь кнопка станет серой, когда мы наведем на нее указатель мыши.
+// Задача: изменить код и скруглить углы текстовых полей, добавив свойство border-radius, аналогичное кнопке.
+{
+  /* <form>
+  <label for="name">Name: </label>
+  <input type="text" id="name" placeholder="John Smith"> 
+  <br><br>
+  <label for="email">Email: </label>
+  <input type="email" id="email" placeholder="name@domain.com">
+  <br><br>
+  <input type="button" value="Send">
+</form>  */
+}
+// input[type='text'], input[type='email'] {
+//   border:1px solid green;
+//   width:100%;
+//   padding: 5px;
+//   border-radius: 20px;
+// }
+// label {
+//   font-weight: bold;
+//   color:green;
+// }
+// input[type='button'] {
+//   background-color: green;
+//   border: none;
+//   border-radius: 20px;
+//   padding: 10px 20px;
+//   font-weight: bold;
+//   color: white;
+// }
+// input[type='button']:hover {
+// background-color: gray;
+// }
+
+//TODO: Practice: Styling Forms (Практика: Стилизация форм)
+// Мы собираемся изменить многое в форме покупки.
+// Давайте начнем с некоторых основных стилей.
+// Задачи:
+// 1. Дайте отступ 2px текстовым полям с цифрами, выровняйте их текст по центру.
+// 2. Установите ширину числовых полей на 50 пикселей.
+// 3. Установите цвет фона кнопки на #2493df. Сделайте текст на кнопке полужирным, размером 16 пикселей и белым цветом.
+// 4. Удалите границу кнопки по умолчанию, используя border: none;
+// Подсказка. Чтобы настроить таргетинг на определенные типы входных данных, используйте следующий синтаксис:
+// input[type="number"] {
+//   padding:2px;
+//   text-align: center;
+//   width:50px;
+// }
+// Мы изменим структуру формы на следующих уроках, так что не беспокойтесь, что форма выглядит неряшливо:
