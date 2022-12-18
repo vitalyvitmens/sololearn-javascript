@@ -781,3 +781,326 @@ input[type='button'] {
   font-size: 16px;
   color: white;
 } */
+
+/* TODO: Layout (Макет) */
+/* p {
+  background-color: red;
+  border: 1px solid blue;
+  padding: 5px;
+}
+b {
+  background-color: yellow;
+  border: 1px dashed black;
+} */
+
+/* TODO: Layout (Макет) */
+/* p {
+  background-color: red;
+  border: 1px solid blue;
+  padding: 5px;
+  display: inline;
+}
+b {
+  background-color: yellow;
+  border: 1px dashed black;
+  display: block;
+} */
+
+/* TODO: Layout (Макет) */
+/* article {
+  background-color: blue;
+  color: white;
+  padding: 20px;
+  margin: 10px;
+} */
+
+/* TODO: Layout (Макет) */
+/* article {
+  background-color: blue;
+  color: white;
+  padding: 20px;
+  margin: 10px;
+  width: 100%;
+}
+section {
+  display: flex;
+} */
+
+/* TODO: Layout (Макет) */
+/* article {
+  background-color: blue;
+  color: white;
+  padding: 20px;
+  margin: 10px;
+  flex: 1;
+}
+.special {
+  flex: 2;
+}
+section {
+  display: flex;
+} */
+
+/* TODO: Layout (Макет) */
+/* header {
+  background-color: #77adda;
+  text-align: center;
+  padding: 20px;
+}
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+.content {
+  background-color: #2ca152;
+  color: white;
+  padding: 20px;
+  height: 200px;
+  flex: 3;
+}
+.side {
+  background-color: #e6e6a5;
+  padding: 20px;
+  flex: 1;
+}
+main {
+  display: flex;
+} */
+
+/* TODO: Practice: Layout (Практика: Макет) */
+/* h1 {
+  font-size: 20px;
+  letter-spacing: 2px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+label {
+  font-size: 16px;
+  font-weight: bold;
+}
+footer {
+  color: #595959;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}
+p strong {
+  color: #2493df;
+}
+section {
+  padding: 10px;
+  background-color: white;
+}
+body {
+  background-color: #e0e0e0;
+}
+#buy {
+  background-color: #687373;
+  margin-top: 10px;
+  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  color: #fcfcfc;
+}
+ul {
+  list-style-type: square;
+  list-style-position: inside;
+  list-style-image: none;
+  padding-left: 30px;
+}
+table {
+  width: fit-content;
+  border-collapse: collapse;
+}
+td,
+th {
+  border: 1px solid black;
+  padding: 10px;
+}
+th {
+  background-color: #2493df;
+  color: white;
+}
+#price {
+  color: #2493df;
+}
+input[type='number'] {
+  padding: 2px;
+  text-align: center;
+  width: 50px;
+}
+input[type='button'] {
+  background-color: #2493df;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+  height: 40px;
+  width: 100%;
+}
+form {
+  display: flex;
+}
+.form-section {
+  flex: 1;
+} */
+
+/* TODO: Float (Плавать) */
+/* img {
+  float: left;
+  margin-right: 10px;
+} */
+
+/* TODO: Relative Position (Относительное положение) */
+/* article {
+  background-color: blue;
+  color: white;
+  padding: 20px;
+  margin: 10px;
+}
+.special {
+  position: relative;
+  bottom: 30px;
+  background-color: orange;
+} */
+
+/* TODO: Absolute Position (Абсолютное положение) */
+/* article {
+  background-color: blue;
+  color: white;
+  padding: 20px;
+  margin: 10px;
+}
+.special {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  background-color: orange;
+} */
+
+/* TODO: Fixed Position (Фиксированная позиция) */
+/* article {
+  background-color: blue;
+  color: white;
+  padding: 20px;
+  margin: 10px;
+}
+.special {
+  position: fixed;
+  bottom: 30px;
+  background-color: orange;
+} */
+
+/* TODO: z-index (z-индекс) */
+/* article {
+  position: relative;
+  background-color: blue;
+  color: white;
+  padding: 20px;
+  margin: 10px;
+  z-index: 2;
+}
+.special {
+  z-index: 1;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  background-color: orange;
+}
+.second {
+  z-index: 0;
+  position: relative;
+  background-color: blue;
+  color: white;
+  padding: 20px;
+  margin: 10px;
+} */
+
+/* TODO: Practice: Positioning (Практика: Позиционирование) */
+/* h1 {
+  font-size: 20px;
+  letter-spacing: 2px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+label {
+  font-size: 16px;
+  font-weight: bold;
+}
+footer {
+  color: #595959;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}
+p strong {
+  color: #2493df;
+}
+section {
+  padding: 10px;
+  background-color: white;
+}
+body {
+  background-color: #e0e0e0;
+}
+#buy {
+  background-color: #687373;
+  margin-top: 10px;
+  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  color: #fcfcfc;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  width: 100%;
+  box-sizing: border-box;
+}
+ul {
+  list-style-type: square;
+  list-style-position: inside;
+  list-style-image: none;
+  padding-left: 30px;
+}
+table {
+  width: fit-content;
+  border-collapse: collapse;
+}
+td,
+th {
+  border: 1px solid black;
+  padding: 10px;
+}
+th {
+  background-color: #2493df;
+  color: white;
+}
+#price {
+  color: #2493df;
+}
+input[type='number'] {
+  padding: 2px;
+  text-align: center;
+  width: 50px;
+}
+input[type='button'] {
+  background-color: #2493df;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+  height: 40px;
+  width: 100%;
+}
+form {
+  display: flex;
+}
+.form-section {
+  flex: 1;
+}
+img {
+  float: left;
+  margin-right: 10px;
+} */
