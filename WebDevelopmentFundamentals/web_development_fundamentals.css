@@ -1104,3 +1104,136 @@ img {
   float: left;
   margin-right: 10px;
 } */
+
+/* TODO: Adding Styles (Добавление стилей) */
+/* label {
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+  padding-left: 10px;
+  line-height: 1.5;
+}
+body {
+  background-color: #202124;
+}
+input {
+  border-radius: 15px;
+  border: 2px solid #3c4043;
+  font-size: 18px;
+  line-height: 1.5;
+  outline: none;
+  font-weight: bold;
+  color: #ffffff;
+  padding: 5px 10px 5px 10px;
+  background-color: #303134;
+} */
+
+/* TODO: Handing Events (Обработка событий) */
+/* label {
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+  padding-left: 10px;
+  line-height: 1.5;
+}
+body {
+  background-color: #202124;
+}
+input {
+  border-radius: 15px;
+  border: 2px solid #3c4043;
+  font-size: 18px;
+  line-height: 1.5;
+  outline: none;
+  font-weight: bold;
+  color: #ffffff;
+  padding: 5px 10px 5px 10px;
+  background-color: #303134;
+} */
+
+/* TODO: Practice: Event Handling (Практика: Обработка событий) */
+h1 {
+  font-size: 20px;
+  letter-spacing: 2px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+label {
+  font-size: 16px;
+  font-weight: bold;
+}
+footer {
+  color: #595959;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}
+p strong {
+  color: #2493df;
+}
+section {
+  padding: 10px;
+  background-color: white;
+}
+body {
+  background-color: #e0e0e0;
+}
+#buy {
+  background-color: #687373;
+  margin-top: 10px;
+  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  color: #fcfcfc;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  width: 100%;
+  box-sizing: border-box;
+}
+ul {
+  list-style-type: square;
+  list-style-position: inside;
+  list-style-image: none;
+  padding-left: 30px;
+}
+table {
+  width: fit-content;
+  border-collapse: collapse;
+}
+td,
+th {
+  border: 1px solid black;
+  padding: 10px;
+}
+th {
+  background-color: #2493df;
+  color: white;
+}
+#price {
+  color: #2493df;
+}
+input[type='number'] {
+  padding: 2px;
+  text-align: center;
+  width: 50px;
+}
+input[type='button'] {
+  background-color: #2493df;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+  height: 40px;
+  width: 100%;
+}
+form {
+  display: flex;
+}
+.form-section {
+  flex: 1;
+}
+img {
+  float: left;
+  margin-right: 10px;
+}
