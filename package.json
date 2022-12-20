@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon WebDevelopmentFundamentals/web_development_fundamentals.js"
+    "dev": "nodemon Responsive Web Design/responsive_web_design.js"
   },
   "keywords": [
     "node",
