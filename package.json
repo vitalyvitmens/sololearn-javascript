@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon jQuery/jQuery.js"
+    "dev": "nodemon CodingForMarketers/CodingForMarketers.js"
   },
   "keywords": [
     "node",
