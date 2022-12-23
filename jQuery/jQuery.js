@@ -573,3 +573,758 @@
 // ancestor (Предок) — это parent (родитель), дедушка и бабушка, прадедушка и т.д.
 // descendant (Потомок) — это child (ребенок), внук, правнук и так далее. имеют одного и того же родителя.
 // Понимание отношений между элементами DOM важно для правильного перемещения по DOM.
+
+//TODO: DOM Traversal (Обход объектной модели документа)
+// jQuery имеет много полезных методов для обхода DOM.
+// Метод parent() возвращает прямой родительский элемент выбранного элемента. Например:
+{
+  /* <div> div element
+  <p>paragraph</p> 
+</div> */
+}
+// <!DOCTYPE html>
+// <html>
+//     <head>
+//         <title>Page Title</title>
+//         <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+//     </head>
+//     <body>
+//     <div> div element
+//         <p>paragraph</p>
+//     </div>
+//     </body>
+// </html>
+// div {
+//   padding: 10px;
+// }
+// p {
+//   border: 1px solid black;
+//   padding: 5px;
+// }
+// JS:
+// $(function () {
+//   var e = $('p').parent()
+//   e.css('border', '2px solid red')
+// })
+// Приведенный выше код выбирает родительский элемент абзаца и устанавливает для него красную рамку.
+// Запустите код, чтобы увидеть его в действии.
+
+//TODO: DOM Traversal (Обход объектной модели документа)
+// Метод parent() может перемещаться только на один уровень вверх по дереву DOM.
+// Чтобы получить всех предков выбранного элемента, вы можете использовать метод parents(). Например:
+// HTML:
+{
+  /* <body>  body
+  <div style="width:300px;"> div
+    <ul> ul
+      <li> li
+        <p>paragraph</p>
+      </li>
+    </ul>   
+  </div>
+</body> */
+}
+// <!DOCTYPE html>
+// <html>
+//     <head>
+//         <title>Page Title</title>
+//         <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+//     </head>
+//     <body>body
+//         <div style="width:300px;">div
+//             <ul>ul
+//                 <li>li
+//                     <p>paragraph</p>
+//                 </li>
+//             </ul>
+//         </div>
+//     </body>
+// </html>
+// body, div, ul, li {
+//   padding: 5px;
+//   margin: 15px;
+// }
+// p {
+//   border: 1px solid black;
+//   padding: 5px;
+// }
+// JS:
+// $(function () {
+//   var e = $('p').parents()
+//   e.css('border', '2px solid red')
+//   $('p').css({
+//     'background-color': 'red',
+//     'font-size': '200%',
+//     'font-weight': 'bold',
+//     color: 'blue',
+//     padding: '10px',
+//     border: '5px solid black',
+//   })
+// })
+// Приведенный выше код устанавливает красную рамку для всех родителей абзаца. Некоторые из наиболее часто используемых методов обхода представлены ниже:
+// См. Рис: DOMTraversal.png
+
+//TODO: DOM Traversal (Обход объектной модели документа)
+// Метод eq() можно использовать для выбора определенного элемента из нескольких выбранных элементов.
+// Например, если на странице несколько элементов div и мы хотим выбрать третий:
+// $("div").eq(2);
+// Номера индексов начинаются с 0, поэтому первый элемент будет иметь номер индекса 0.
+
+//TODO: Remove Elements (Удалить элементы)
+// Удаляем выбранные элементы из DOM с помощью метода remove(). Например:
+{
+  /* <p style="color:red">Red</p>
+<p style="color:green">Green</p>
+<p style="color:blue">Blue</p> */
+}
+// <!DOCTYPE html>
+// <html>
+//     <head>
+//         <title>Page Title</title>
+//         <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+//     </head>
+//     <body>
+//         <p style="color:red">Red</p>
+//         <p style="color:green">Green</p>
+//         <p style="color:blue">Blue</p>
+//     </body>
+// </html>
+// JS:
+// $(function () {
+//   $('p').eq(1).remove()
+// })
+// Это удаляет зеленый, второй элемент абзаца.
+// Вы также можете использовать метод remove() для нескольких выбранных элементов, например, $("p").remove() удаляет все абзацы.
+// Метод jQuery remove() удаляет выбранные элементы, а также их дочерние элементы.
+
+//TODO: Removing Content (Удаление содержимого)
+// Метод empty() используется для удаления дочерних элементов выбранного элемента(ов). Например:
+// HTML:
+{
+  /* <div>
+   <p style="color:red">Red</p>
+   <p style="color:green">Green</p>
+   <p style="color:blue">Blue</p>
+</div> */
+}
+// CSS:
+// div {
+//   background-color: aqua;
+//   width: 300px;
+//   height: 200px;
+// }
+// JS:
+// $(function () {
+//   $('div').empty()
+// })
+// Это удаляет все три дочерних элемента div, оставляя его пустым.
+
+//TODO: ЗАДАЧА: Removing Content (Удаление содержимого)
+// Чтобы очистить второй дочерний элемент элемента с id="nav".
+// $(function () {
+//   var e = $('#nav').children()
+//   e.eq(1).empty()
+// })
+
+//TODO: Handling Events (Обработка событий)
+// JQuery предоставляет эффективный способ обработки событий. События происходят, когда пользователь выполняет действие, например, щелкает элемент, перемещает мышь или отправляет форму.
+// Когда событие происходит на целевом элементе, выполняется handler function.
+// <!DOCTYPE html>
+// <html>
+//     <head>
+//         <title>Page Title</title>
+//     </head>
+//     <body>
+//         <div id="demo">Click Me</div>
+//     </body>
+// </html>
+// Например, предположим, что мы хотим обработать событие click для элемента с id="demo" и отобразить текущую дату при нажатии кнопки. Используя чистый JavaScript, код выглядит так:
+// window.onload = function () {
+//   var x = document.getElementById('demo')
+//   x.onclick = function () {
+//     document.body.innerHTML = Date()
+//   }
+// }
+// Это же событие можно обработать с помощью jQuery со следующим кодом:
+// $(function () {
+//   $('#demo').click(function () {
+//     $('body').html(Date())
+//   })
+// })
+// Как видите, код jQuery короче, его легче читать и писать.
+// Обратите внимание, что имя события предоставляется без префикса «on» (т.е. onclick в JavaScript — это click в jQuery).
+// Функция, которая выполняется при возникновении события, называется обработчиком события.
+
+//TODO: Common Events (Общие события)
+// Ниже приведены наиболее часто используемые события:
+// События мыши:
+// - click (щелчок) происходит при щелчке элемента.
+// - dblclick (двойной щелчок) возникает при двойном щелчке элемента.
+// - mouseenter (вход мыши) возникает, когда указатель мыши находится над выбранным элементом (входит в него).
+// - mouseleave (уход мыши) возникает, когда указатель мыши покидает выбранный элемент.
+// - mouseover (наведен курсор мыши) происходит, когда указатель мыши находится над выбранным элементом.
+// События клавиатуры:
+// - keydown (нажатие клавиши) происходит при нажатии клавиши клавиатуры.
+// - keyup (отпускание клавиши) происходит, когда клавиша клавиатуры отпускается.
+// События формы:
+// - submit (подать, предоставить) происходит при отправке формы.
+// - change (изменение) происходит, когда значение элемента было изменено.
+// - focus (фокус) возникает, когда элемент получает фокус.
+// - blur (размытие) происходит, когда элемент теряет фокус.
+// События документа:
+// - ready (готовность) происходит, когда DOM был загружен.
+// - resize (изменение размера) происходит, когда окно браузера меняет размер.
+// - scroll (прокрутка) происходит, когда пользователь прокручивает указанный элемент.
+// В качестве примера давайте изменим содержимое div, когда пользователь вводит текст в поле ввода. Для этого нам нужно обработать событие keydown, которое происходит при нажатии клавиши на клавиатуре:
+// HTML:
+{
+  /* <input type="text" id="name" />
+<div id="msg"></div> */
+}
+// <!DOCTYPE html>
+// <html>
+//     <head>
+//         <title>Page Title</title>
+//         <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+//     </head>
+//     <body>
+//         <input type="text" id="name" />
+//         <div id="msg"></div>
+//     </body>
+// </html>
+// CSS:
+// #msg {
+//   color: blue;
+//   font-size: 16pt;
+//   font-weight: bold;
+// }
+// JS:
+// $(function () {
+//   $('#name').keydown(function () {
+//     $('#msg').html($('#name').val())
+//   })
+// })
+// Приведенный выше код обрабатывает событие нажатия клавиши для элемента с id="name" и присваивает содержимому div с id="msg" значение поля ввода.
+// Названия событий говорят сами за себя, поэтому просто поэкспериментируйте, чтобы увидеть их в действии.
+
+//TODO: ЗАДАЧА: Common Events (Общие события)
+// Чтобы обработать событие щелчка по тегу абзаца.
+// $(function () {
+//   $('p').click(function () {
+//     alert('Clicked!')
+//   })
+// })
+
+//TODO: Handling Events (Обработка событий)
+// Другой способ обработки событий в jQuery — использование метода on().
+// Метод on() используется для присоединения события к выбранному элементу.
+// Например:
+// <!DOCTYPE html>
+// <html>
+//     <head>
+//         <title>Page Title</title>
+//         <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+//     </head>
+//     <body>
+//         <p>Click Me</p>
+//     </body>
+// </html>
+// $(function () {
+//   $('p').on('click', function () {
+//     alert('clicked')
+//   })
+// })
+// Как видите, имя события передается в качестве первого аргумента метода on(). Второй аргумент — это функция-обработчик.
+// Метод on() полезен для привязки одной и той же функции-обработчика к нескольким событиям. Вы можете указать несколько имен событий, разделенных пробелами, в качестве первого аргумента. Например, вы можете использовать один и тот же обработчик событий для событий click и dblclick.
+
+//TODO: off() (выключенный())
+// Вы можете удалить обработчики событий, используя метод off().
+// Например:
+// <!DOCTYPE html>
+// <html>
+//     <head>
+//         <title>Page Title</title>
+//         <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+//     </head>
+//     <body>
+//         <div>Click Me</div>
+//     </body>
+// </html>
+// Аргументом метода off() является имя события, для которого вы хотите удалить обработчик.
+// $(function () {
+//   $('div').on('click', function () {
+//     alert('Hi there!')
+//   })
+//   $('div').off('click')
+// })
+
+//TODO: The Event Object (Объект события)
+// Каждая функция обработки событий может получать event object (объект события), который содержит свойства и методы, связанные с событием:
+// - pageX, pageY положение мыши (координаты X и Y) в момент возникновения события относительно верхнего левого края страницы.
+// - type (тип события) введите тип события (например, "click").
+// - which (какая) какая кнопка или клавиша была нажата.
+// - data (данные) любые данные, которые были переданы, когда событие было привязано.
+// - target (цель) нацельтесь на элемент DOM, который инициировал событие.
+// - preventDefault() (предотвращение по умолчанию) предотвращает действие события по умолчанию (например, переход по ссылке).
+// - stopPropagation() (остановить распространение) Остановить распространение события на другие элементы.
+// Вы можете ознакомиться с нашим курсом JavaScript для получения дополнительной информации о свойствах событий.
+// Например, давайте обработаем событие click для элемента <a> и предотвратим его переход по ссылке, предоставленной в атрибуте href:
+// HTML:
+{
+  /* <a href="https://www.sololearn.com">Click me</a> */
+}
+// <!DOCTYPE html>
+// <html>
+//     <head>
+//         <title>Page Title</title>
+//         <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+//     </head>
+//     <body>
+//         <a href="https://www.sololearn.com">Click me</a>
+//     </body>
+// </html>
+// JS:
+// $(function () {
+//   $('a').on('click', function (event) {
+//     alert(event.pageX)
+//     event.preventDefault()
+//   })
+// })
+// Приведенный выше код предупреждает о положении мыши во время щелчка и предотвращает переход по ссылке.
+// Как видите, объект события передается функции обработчика события в качестве аргумента.
+
+//TODO: Trigger Events (Триггерные события)
+// Мы также можем инициировать события программно, используя метод trigger(). Например, вы можете инициировать событие щелчка без фактического нажатия пользователем на элемент:
+// <!DOCTYPE html>
+// <html>
+//     <head>
+//         <title>Page Title</title>
+//         <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+//     </head>
+//     <body>
+//         <div>Click me</div>
+//     </body>
+// </html>
+// $(function () {
+//   $('div').on('click', function () {
+//     alert('Clicked!')
+//   })
+//   $('div').trigger('click')
+// })
+// Этот код запускает событие click для выбранного элемента.
+// Метод trigger() нельзя использовать для имитации собственных событий браузера, таких как нажатие на поле ввода файла или тег привязки. Можно обрабатывать только события в системе событий jQuery.
+
+//TODO: To-Do List (Список дел)
+// Давайте создадим проект списка дел, используя изученные концепции.
+// Список дел сможет добавлять новые элементы в список, а также удалять существующие элементы.
+// Сначала мы создаем HTML:
+// <h1>My To-Do List</h1>
+// <input type="text" placeholder="New item" />
+// <button id="add">Add</button>
+// <ol id="mylist"></ol>
+// Щелчок по кнопке должен добавить значение поля ввода в наш список <ol>.
+
+//TODO: To-Do List (Список дел)
+// Теперь, когда HTML готов, мы можем начать писать наш код jQuery.
+// Во-первых, мы обрабатываем событие click для кнопки:
+// $(function () {
+//   $('#add').on('click', function () {
+//     //event handler
+//   })
+// })
+// Внутри обработчика события мы выбираем значение поля ввода и создаем новый элемент <li>, добавляя его в список:
+// var val = $('input').val()
+// if (val !== '') {
+//   var elem = $('<li></li>').text(val)
+//   $(elem).append("<button class='rem'>X</button>")
+//   $('#mylist').append(elem)
+//   $('input').val('') //clear the input
+// }
+// Приведенный выше код принимает значение поля ввода и присваивает его переменной val. Оператор if проверяет, не является ли значение пустым, а затем создает новый элемент <li>. Добавляется кнопка для его удаления, после чего вновь созданный элемент добавляется в список <ol id="mylist">. Вот полный код в действии:
+// HTML:
+// <!DOCTYPE html>
+// <html>
+//     <head>
+//         <title>My To-Do List</title>
+//         <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+//     </head>
+//     <body>
+//         <h1>My To-Do List</h1>
+//         <input type="text" placeholder="New item" />
+//         <button id="add">Add</button>
+//         <ol id="mylist"></ol>
+//     </body>
+// </html>
+// CSS:
+// h1 {
+//   color: #1abc9c;
+// }
+// .rem {
+//   margin-left: 5px;
+//   background-color: white;
+//   color: red;
+//   border: none;
+//   cursor: pointer;
+// }
+// $(function () {
+//   $('#add').on('click', function () {
+//     var val = $('input').val()
+//     if (val !== '') {
+//       var elem = $('<li></li>').text(val)
+//       $(elem).append("<button class='rem'>X</button>")
+//       $('#mylist').append(elem)
+//       $('input').val('')
+//     }
+//   })
+// })
+// Кнопка удаления пока не работает. Мы разберемся с этим в следующем разделе!
+
+//TODO: To-Do List (Список дел)
+// Все, что осталось сделать, это обработать событие click на кнопке class="rem" и удалить соответствующий элемент <li> из списка.
+// $('.rem').on('click', function () {
+//   $(this).parent().remove()
+// })
+// Помните, что это текущий объект. Приведенный выше код удаляет родителя текущего объекта, который в нашем случае является родителем кнопки удаления, элемента <li>. Полный код:
+// HTML:
+// <!DOCTYPE html>
+// <html>
+//     <head>
+//         <title>My To-Do List</title>
+//         <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+//     </head>
+//     <body>
+//         <h1>My To-Do List</h1>
+//         <input type="text" placeholder="New item" />
+//         <button id="add">Add</button>
+//         <ol id="mylist"></ol>
+//     </body>
+// </html>
+// CSS:
+// h1 {
+//   color: #1abc9c;
+// }
+// .rem {
+//   margin-left: 5px;
+//   background-color: white;
+//   color: red;
+//   border: none;
+//   cursor: pointer;
+// }
+// $(function () {
+//   $('#add').on('click', function () {
+//     var val = $('input').val()
+//     if (val !== '') {
+//       var elem = $('<li></li>').text(val)
+//       $(elem).append("<button class='rem'>X</button>")
+//       $('#mylist').append(elem)
+//       $('input').val('')
+//       $('.rem').on('click', function () {
+//         $(this).parent().remove()
+//       })
+//     }
+//   })
+// })
+// Список дел был просто короткой демонстрацией того, как обрабатывать события и создавать простой проект.
+
+//TODO: Hide/Show (Скрыть/показать)
+// В jQuery есть несколько простых в реализации эффектов для создания анимации.
+// Методы hide() и show() используются для скрытия и отображения выбранных элементов.
+// Метод toggle() используется для переключения между скрытием и отображением элементов.
+// Например:
+// HTML:
+// <!DOCTYPE html>
+// <html>
+//     <head>
+//         <title>Page Title</title>
+//         <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+//     </head>
+//     <body>
+//         <p>Click to toggle show/hide</p>
+//         <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+//         </div>
+//     </body>
+// </html>
+// CSS:
+// p {
+//   background-color:grey;
+//   text-align:center;
+//   color:white;
+//   padding:5px;
+//   cursor:pointer;
+// }
+// div {
+//   background-color:grey;
+//   color:white;
+// }
+// $(function () {
+//   $('p').on('click', function () {
+//     $('div').toggle()
+//   })
+// })
+// Методы hide/show/toggle могут принимать необязательный аргумент speed, который определяет скорость анимации в миллисекундах .
+// Например, давайте передадим 1000 миллисекунд в качестве аргумента скорости для метода toggle():
+// $(function () {
+//   $('p').on('click', function () {
+//     $('div').toggle(1000)
+//   })
+// })
+// Методы скрытия/отображения/переключения также могут принимать второй необязательный параметр обратного вызова, который является функцией, выполняемой после завершения анимации.
+
+//TODO: Fade In/Out (Постепенное появление/исчезновение)
+// Подобно методам скрытия/отображения, jQuery предоставляет методы fadeIn fadeOut, которые делают элемент видимым и исчезающим.
+// Точно так же, как метод toggle() переключается между скрытием и отображением, метод fadeToggle() появляется и исчезает.
+// Давайте посмотрим на fadeToggle() в действии:
+// HTML:
+// <!DOCTYPE html>
+// <html>
+//     <head>
+//         <title>Page Title</title>
+//         <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+//     </head>
+//     <body>
+//         <p>Click to toggle fading</p>
+//         <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+//         </div>
+//     </body>
+// </html>
+// CSS:
+// p {
+//   background-color:grey;
+//   text-align:center;
+//   color:white;
+//   padding:5px;
+//   cursor:pointer;
+// }
+// div {
+//   background-color:grey;
+//   color:white;
+// }
+// JS:
+// $(function () {
+//   $('p').on('click', function () {
+//     $('div').fadeToggle(1000)
+//   })
+// })
+// Как и toggle(), функция fadeToggle() принимает два необязательных параметра:
+// - speed (скорость)
+// - callback (обратный вызов)
+// Другой метод, используемый для затухания, — fadeTo(), который позволяет затухать до заданной непрозрачности (значение от 0 до 1).
+// Например:
+// $("div").fadeTo(1500, 0.7);
+
+//TODO: Slide Up/Down (Слайд вверх/вниз)
+// Методы slideUp() и slideDown() используются для создания эффекта скольжения на элементах.
+// Опять же, аналогично предыдущим методам переключения, метод slideToggle() переключается между эффектами скольжения и может принимать два необязательных параметра: скорость и обратный вызов.
+// Например:
+// HTML:
+// <!DOCTYPE html>
+// <html>
+//     <head>
+//         <title>Page Title</title>
+//         <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+//     </head>
+//     <body>
+//         <p>Click to toggle sliding</p>
+//         <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+//         </div>
+//     </body>
+// </html>
+// CSS:
+// p {
+//   background-color:grey;
+//   text-align:center;
+//   color:white;
+//   padding:5px;
+//   cursor:pointer;
+// }
+// div {
+//   background-color:grey;
+//   color:white;
+// }
+// JS:
+// $(function () {
+//   $('p').on('click', function () {
+//     $('div').slideToggle(500)
+//   })
+// })
+
+//TODO: animate() (анимировать())
+// Метод animate() позволяет вам анимировать заданное значение или значение относительно текущего значения.
+// Вам необходимо определить свойства CSS для анимации в качестве его параметра в формате JSON (пары «ключ»: «значение»).
+// Второй параметр определяет скорость анимации.
+// Например, следующий код анимирует свойство ширины элемента div за 1 секунду до значения 250px:
+// HTML:
+// <!DOCTYPE html>
+// <html>
+//     <head>
+//         <title>Page Title</title>
+//         <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+//     </head>
+//     <body>
+//         <div>Click me</div>
+//     </body>
+// </html>
+// CSS:
+// div {
+//   display:inline-block;
+//   padding:25px;
+//   background-color:grey;
+//   color:white;
+//   text-align:center;
+//   cursor:pointer;
+// }
+// JS:
+// $(function () {
+//   $('div').on('click', function () {
+//     $('div').animate({ width: '250px' }, 1000)
+//   })
+// })
+// Обратите внимание на формат JSON для предоставления параметров CSS. Синтаксис JSON также использовался в предыдущих модулях при работе со свойствами CSS.
+// Вы можете анимировать любое свойство CSS, используя вышеупомянутый синтаксис, но есть одна важная вещь, которую следует помнить: все имена свойств должны быть написаны в верблюжьем регистре при использовании с методом animate () ( верблюжий регистр — это практика написания составных слов или фраз таким образом, что каждое слово или аббревиатура начинается с заглавной буквы с первым словом в нижнем регистре). Вам нужно будет написать paddingLeft вместо padding-left, marginRight вместо margin-right и так далее.
+
+//TODO: animate() (анимировать())
+// Несколько свойств можно анимировать одновременно, разделяя их запятыми .
+// Например:
+// HTML:
+// <!DOCTYPE html>
+// <html>
+//     <head>
+//         <title>Page Title</title>
+//         <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+//     </head>
+//     <body>
+//         <div>Click me</div>
+//     </body>
+// </html>
+// CSS:
+// div {
+//   display:inline-block;
+//   padding:25px;
+//   background-color:grey;
+//   color:white;
+//   text-align:center;
+//   cursor:pointer;
+// }
+// JS:
+// $(function () {
+//   $('div').on('click', function () {
+//     $('div').animate(
+//       {
+//         width: '250px',
+//         height: '250px',
+//       },
+//       1000
+//     )
+//   })
+// })
+// Также возможно определить относительные значения (тогда значение будет относиться к текущему значению элемента). Это делается путем добавления += или -= перед значением:
+// $(function () {
+//   $('div').on('click', function () {
+//     $('div').animate(
+//       {
+//         width: '+=250px',
+//         height: '+=250px',
+//       },
+//       1000
+//     )
+//   })
+// })
+// Чтобы остановить анимацию до ее завершения, jQuery предоставляет метод stop ().
+
+//TODO: Animation Queue (Очередь анимации)
+// По умолчанию jQuery поставляется с функцией очереди для анимации.
+// Это означает, что если вы пишете несколько вызовов animate() один за другим, jQuery создает internal (внутреннюю) очередь для этих вызовов методов. Затем он запускает анимационные вызовы один за другим .
+// Например:
+// HTML:
+// <!DOCTYPE html>
+// <html>
+//     <head>
+//         <title>Page Title</title>
+//         <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+//     </head>
+//     <body>
+//     <div></div>
+//     </body>
+// </html>
+// CSS:
+// div {
+//   background:orange;
+//   height:80px;width:80px;
+//   position:absolute;
+//   border-radius: 50%;
+//   opacity: 0.5;
+// }
+// JS:
+// $(function () {
+//   var div = $('div')
+//   div.animate({ opacity: 1 })
+//   div.animate({ height: '+=100px', width: '+=100px', top: '+=100px' }, 500)
+//   div.animate({ height: '-=100px', width: '-=100px', left: '+=100px' }, 500)
+//   div.animate({ height: '+=100px', width: '+=100px', top: '-=100px' }, 500)
+//   div.animate({ height: '-=100px', width: '-=100px', left: '-=100px' }, 500)
+//   div.animate({ opacity: 0.5 })
+// })
+// Каждый вызов метода animate() будет выполняться один за другим.
+// Помните, чтобы манипулировать положением элементов, вам нужно установить для свойства CSS position элемента значение relative, fixed или absolute.
+// Метод animate(), как и методы hide/show/fade/slide, может принимать в качестве параметра необязательную функцию обратного вызова, которая выполняется после завершения текущего эффекта.
+
+//TODO: Drop-Down Menu (Выпадающее меню)
+// Давайте создадим простое выпадающее меню, которое будет открываться при нажатии на пункт меню.
+// HTML:
+// <!DOCTYPE html>
+// <html>
+//     <head>
+//         <title>Page Title</title>
+//         <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+//     </head>
+//     <body>
+//     <div class="menu">
+//       <div id="item">Dropdown</div>
+//       <div id="submenu">
+//         <a href="#">Link 1</a>
+//         <a href="#">Link 2</a>
+//         <a href="#">Link 3</a>
+//       </div>
+//     </div>
+//     </body>
+// </html>
+// CSS:
+// #item {
+//   background-color: #4CAF50;
+//   color: white;
+//   padding: 16px;
+//   font-size: 16px;
+//   border: none;
+//   cursor: pointer;
+// }
+// #item:hover, #item:focus {
+//   background-color: #3e8e41;
+// }
+// .menu {
+//   position: relative;
+//   display: inline-block;
+// }
+// #submenu {
+//   display: none;
+//   position: absolute;
+//   background-color: #3e8e41;
+//   min-width: 160px;
+//   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+// }
+// #submenu a {
+//   color: white;
+//   padding: 12px 16px;
+//   text-decoration: none;
+//   display: block;
+// }
+// #submenu a:hover {
+//   background-color: #4CAF50
+// }
+// JS:
+$(function () {
+  $('#item').on('click', function () {
+    $('#submenu').slideToggle(500)
+  })
+})
+// Приведенный выше код обрабатывает событие щелчка элемента id="item" и открывает/закрывает подменю за 500 миллисекунд.
+// Запустите код, чтобы увидеть его в действии. Вы также можете проверить CSS, используемый для стилизации элементов.
