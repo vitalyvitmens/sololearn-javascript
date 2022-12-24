@@ -1255,15 +1255,15 @@
 //   opacity: 0.5;
 // }
 // JS:
-// $(function () {
-//   var div = $('div')
-//   div.animate({ opacity: 1 })
-//   div.animate({ height: '+=100px', width: '+=100px', top: '+=100px' }, 500)
-//   div.animate({ height: '-=100px', width: '-=100px', left: '+=100px' }, 500)
-//   div.animate({ height: '+=100px', width: '+=100px', top: '-=100px' }, 500)
-//   div.animate({ height: '-=100px', width: '-=100px', left: '-=100px' }, 500)
-//   div.animate({ opacity: 0.5 })
-// })
+$(function () {
+  var div = $('div')
+  div.animate({ opacity: 1 })
+  div.animate({ height: '+=100px', width: '+=100px', top: '+=100px' }, 500)
+  div.animate({ height: '-=100px', width: '-=100px', left: '+=100px' }, 500)
+  div.animate({ height: '+=100px', width: '+=100px', top: '-=100px' }, 500)
+  div.animate({ height: '-=100px', width: '-=100px', left: '-=100px' }, 500)
+  div.animate({ opacity: 0.5 })
+})
 // Каждый вызов метода animate() будет выполняться один за другим.
 // Помните, чтобы манипулировать положением элементов, вам нужно установить для свойства CSS position элемента значение relative, fixed или absolute.
 // Метод animate(), как и методы hide/show/fade/slide, может принимать в качестве параметра необязательную функцию обратного вызова, которая выполняется после завершения текущего эффекта.
@@ -1321,10 +1321,10 @@
 //   background-color: #4CAF50
 // }
 // JS:
-$(function () {
-  $('#item').on('click', function () {
-    $('#submenu').slideToggle(500)
-  })
-})
+// $(function () {
+//   $('#item').on('click', function () {
+//     $('#submenu').slideToggle(500)
+//   })
+// })
 // Приведенный выше код обрабатывает событие щелчка элемента id="item" и открывает/закрывает подменю за 500 миллисекунд.
 // Запустите код, чтобы увидеть его в действии. Вы также можете проверить CSS, используемый для стилизации элементов.

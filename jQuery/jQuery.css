@@ -207,16 +207,17 @@ div {
 } */
 
 /* TODO: Animation Queue (Очередь анимации) */
-/* div {
+div {
   background: orange;
   height: 80px;
   width: 80px;
   position: absolute;
   border-radius: 50%;
   opacity: 0.5;
-} */
+}
 
-#item {
+/* TODO: Drop-Down Menu (Выпадающее меню) */
+/* #item {
   background-color: #4CAF50;
   color: white;
   padding: 16px;
@@ -246,4 +247,4 @@ div {
 }
 #submenu a:hover {
   background-color: #4CAF50
-}
+} */
