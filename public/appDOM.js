@@ -62,18 +62,95 @@ function addStyleTo(node, text, color, bgcolor, fontSize) {
   }
 }
 
+heading.onclick = () => {
+  if (heading4.style.color === 'white') {
+    heading4.style.color = 'grey'
+    heading4.style.backgroundColor = 'black'
+    heading.textContent = 'ДА РОЖИ'
+    heading2.textContent = 'ТО У НАС'
+    heading3.textContent = 'У ВСЕХ ХОРОШИ!'
+    heading4.textContent = '_____ Б.С. Мицура _____'
+  } else {
+    heading4.style.color = 'white'
+    heading4.style.backgroundColor = 'rgb(21, 38, 117)'
+    heading.textContent = 'УЧИТЬСЯ'
+    heading2.textContent = 'УЧИТЬСЯ'
+    heading3.textContent = 'И ЕЩЕ РАЗ УЧИТЬСЯ!'
+    heading4.textContent = '_____ В.И. Ленин _____'
+  }
+}
+
+heading2.onclick = () => {
+  if (heading4.style.color === 'white') {
+    heading4.style.color = 'grey'
+    heading4.style.backgroundColor = 'black'
+    heading.textContent = 'СПАСИБО,'
+    heading2.textContent = 'Я ПЕШКОМ'
+    heading3.textContent = 'ПОСТОЮ!'
+    heading4.textContent = '_____ Б.С. Мицура _____'
+  } else {
+    heading4.style.color = 'white'
+    heading4.style.backgroundColor = 'rgb(21, 38, 117)'
+    heading.textContent = 'УЧИТЬСЯ'
+    heading2.textContent = 'УЧИТЬСЯ'
+    heading3.textContent = 'И ЕЩЕ РАЗ УЧИТЬСЯ!'
+    heading4.textContent = '_____ В.И. Ленин _____'
+  }
+}
+
+heading3.onclick = () => {
+  if (heading4.style.color === 'white') {
+    heading4.style.color = 'grey'
+    heading4.style.backgroundColor = 'black'
+    heading.textContent = 'НУ ТЫ ЭТО...'
+    heading2.textContent = 'ЗАХОДИ,'
+    heading3.textContent = 'ЕСЛИ ЧТО...'
+    heading4.textContent = '_____ Б.С. Мицура _____'
+  } else {
+    heading4.style.color = 'white'
+    heading4.style.backgroundColor = 'rgb(21, 38, 117)'
+    heading.textContent = 'УЧИТЬСЯ'
+    heading2.textContent = 'УЧИТЬСЯ'
+    heading3.textContent = 'И ЕЩЕ РАЗ УЧИТЬСЯ!'
+    heading4.textContent = '_____ В.И. Ленин _____'
+  }
+}
+
 heading4.onclick = () => {
   if (heading4.style.color === 'white') {
     heading4.style.color = 'grey'
     heading4.style.backgroundColor = 'black'
-    heading4.style.text = 'Б.С. Мицура'
+    heading.textContent = 'КАК'
+    heading2.textContent = 'СТЕМНЕЕТ'
+    heading3.textContent = 'БУДЕМ БРАТЬ!'
+    heading4.textContent = '_____ Б.С. Мицура _____'
   } else {
     heading4.style.color = 'white'
     heading4.style.backgroundColor = 'rgb(21, 38, 117)'
-    heading4.style.text = '_____ В.И. Ленин _____'
+    heading.textContent = 'УЧИТЬСЯ'
+    heading2.textContent = 'УЧИТЬСЯ'
+    heading3.textContent = 'И ЕЩЕ РАЗ УЧИТЬСЯ!'
+    heading4.textContent = '_____ В.И. Ленин _____'
   }
 }
 
+heading4.addEventListener('dblclick', () => {
+  if (heading4.style.color === 'white') {
+    heading4.style.color = 'grey'
+    heading4.style.backgroundColor = 'black'
+    heading.textContent = 'А ОСТАЛЬНОЕ'
+    heading2.textContent = 'МНЕ'
+    heading3.textContent = 'ДО ЛАМПОЧКИ!'
+    heading4.textContent = '_____ Б.С. Мицура _____'
+  } else {
+    heading4.style.color = 'white'
+    heading4.style.backgroundColor = 'rgb(21, 38, 117)'
+    heading.textContent = 'УЧИТЬСЯ'
+    heading2.textContent = 'УЧИТЬСЯ'
+    heading3.textContent = 'И ЕЩЕ РАЗ УЧИТЬСЯ!'
+    heading4.textContent = '_____ В.И. Ленин _____'
+  }
+})
 // console.dir(heading)
 // console.log(heading.id)
 // console.log(heading.textContent)
