@@ -31,22 +31,22 @@
 // const comUrl = urlGenerator('com')
 // const ruUrl = urlGenerator('ru')
 
-// console.log(comUrl('google'))
-// console.log(comUrl('netflex'))
-// console.log(ruUrl('yandex'))
+console.log(comUrl('google'))
+console.log(comUrl('netflex'))
+console.log(ruUrl('yandex'))
 
-// function myBind(context, fn) {
-//   return function (...args) {
-//     fn.apply(context, args)
-//   }
-// }
+function myBind(context, fn) {
+  return function (...args) {
+    fn.apply(context, args)
+  }
+}
 
-// function logPerson() {
-//   console.log(`Person: ${this.name}, ${this.age}, ${this.job}`)
-// }
+function logPerson() {
+  console.log(`Person: ${this.name}, ${this.age}, ${this.job}`)
+}
 
-// const person1 = { name: 'Михаил', age: 22, job: 'Frontend' }
-// const person2 = { name: 'Елена', age: 19, job: 'SMM' }
+const person1 = { name: 'Михаил', age: 22, job: 'Frontend' }
+const person2 = { name: 'Елена', age: 19, job: 'SMM' }
 
-// myBind(person1, logPerson)()
-// myBind(person2, logPerson)()
+myBind(person1, logPerson)()
+myBind(person2, logPerson)()
