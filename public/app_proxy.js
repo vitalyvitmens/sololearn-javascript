@@ -105,10 +105,10 @@ const data = withHiddenProps({
 
 // Optimization
 const userData = [
-  { id: 1, name: 'Vladimir', job: 'Revolutionary', age: 52 },
-  { id: 2, name: 'Elena', job: 'Student', age: 22 },
-  { id: 3, name: 'Victor', job: 'Backend', age: 23 },
-  { id: 4, name: 'Vasilisa', job: 'Teacher', age: 24 },
+  { id: 11, name: 'Vladimir', job: 'Revolutionary', age: 52 },
+  { id: 22, name: 'Elena', job: 'Student', age: 22 },
+  { id: 33, name: 'Victor', job: 'Backend', age: 23 },
+  { id: 44, name: 'Vasilisa', job: 'Teacher', age: 24 },
 ]
 
 const index = {}
@@ -138,8 +138,8 @@ const IndexArray = new Proxy(Array, {
 })
 
 const users = new IndexArray([
-  { id: 11, name: 'Vladimir', job: 'Revolutionary', age: 52 },
-  { id: 22, name: 'Elena', job: 'Student', age: 22 },
-  { id: 33, name: 'Victor', job: 'Backend', age: 23 },
-  { id: 44, name: 'Vasilisa', job: 'Teacher', age: 24 },
+  { id: 1, name: 'Vladimir', job: 'Revolutionary', age: 53 },
+  { id: 2, name: 'Iosif', job: 'General Secretary', age: 73 },
+  { id: 3, name: 'Lavrentiy', job: 'General Commissioner', age: 54 },
+  { id: 4, name: 'Yuriy', job: 'Spaceman', age: 34 },
 ])
