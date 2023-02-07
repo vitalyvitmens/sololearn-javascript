@@ -1,10 +1,10 @@
 const people = [
   { name: 'Vladimir', age: 53, budget: 40000 },
-  { name: 'Iosif', age: 73, budget: 3400 },
+  { name: 'Iosif', age: 73, budget: 6900 },
   { name: 'Lavrentiy', age: 54, budget: 50000 },
   { name: 'Yuriy', age: 34, budget: 1800 },
-  { name: 'Victor', age: 17, budget: 25000 },
-  { name: 'Vasilisa', age: 16, budget: 2300 },
+  { name: 'Egor', age: 14, budget: 300 },
+  { name: 'Arina', age: 20, budget: 1000 },
 ]
 
 // // ES5
@@ -25,14 +25,14 @@ const people = [
 // })
 
 // ForEach ES6
-// people.forEach((person) => console.log(person))
+// people.forEach((person, index, peopleArr) => console.log(person, index, peopleArr))
 
 // Map ES6
 // const newPeople = people.map((person) => `${person.name} (${person.age})`)
 // const newPeople2 = people.map((person) => person.age * 3)
 
-// console.log(newPeople)
-// console.log(newPeople2)
+// console.log(newPeople.join('\n'))
+// console.log(newPeople2.join('\n'))
 
 // // Filter ES5
 // const adults = people.filter((person) => {
@@ -43,8 +43,8 @@ const people = [
 // console.log(adults)
 
 // Filter ES6
-const adults = people.filter((person) => person.age >= 18)
-console.log(adults)
+const peopleFilterAge = people.filter((person) => person.age >= 18)
+console.log(peopleFilterAge)
 
 // // Reduce
 // const amount = people.reduce((total, person) => {
@@ -55,17 +55,18 @@ console.log(adults)
 // Reduce ES6
 const amount = people.reduce((total, person) => total + person.budget, 0)
 console.log(amount)
+console.log(people.reduce((acc, p) => acc + p.budget, 0))
 
 // Find
 const iosif = people.find((person) => person.name === 'Iosif')
 console.log(iosif)
-
-const lowBudget = people.find((person) => person.budget < 2000)
-console.log(lowBudget)
+console.log(people.find((p) => p.name === 'Egor' && p.age === 14))
+console.log(people.find((p) => (p.name, p.age) === ('Egor', 14)))
 
 // FindIndex
 const iosifIndex = people.findIndex((person) => person.name === 'Iosif')
 console.log(iosifIndex)
+console.log(people.findIndex((p) => p.age === 73))
 
 // Практика:
 const newAmount = people
@@ -73,11 +74,22 @@ const newAmount = people
   .map((person) => {
     return {
       info: `${person.name} (${person.age})`,
-      budget: Math.sqrt(person.budget),
+      budgetSqrt: Math.sqrt(person.budget),
     }
   })
-  .reduce((total, person) => total + person.budget, 0)
+  .reduce((total, person) => total + person.budgetSqrt, 0)
 
 console.log(newAmount)
+
+const nA = people
+  .filter((p) => p.budget < 1001)
+  .map((p) => {
+    return {
+      info: `${p.name} (${p.age})`,
+      budget: p.budget,
+    }
+  })
+  // .reduce((acc, p) => acc + p.budget, 0)
+console.log(nA)
 
 // console.log(Object.values(people))
