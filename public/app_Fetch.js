@@ -3,9 +3,7 @@
 const requesrURL = 'https://jsonplaceholder.typicode.com/users'
 
 async function sendRequest(method, url, body = null) {
-  const headers = {
-    'Content-Type': 'application/json',
-  }
+  const headers = { 'Content-Type': 'application/json' }
 
   const response = await fetch(url, {
     method: method,

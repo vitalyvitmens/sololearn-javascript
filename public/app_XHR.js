@@ -32,7 +32,7 @@ function sendRequest(method, url, body = null) {
   })
 }
 
-// sendRequest('GET', requesrURL)
+// sendRequest('GET', requesrURL) //! раскомментируй для запроса
 //   .then((data) => console.log(data))
 //   .catch((err) => console.log(err))
 

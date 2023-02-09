@@ -1,4 +1,4 @@
-// Objects:
+// TODO: Проксирование Objects:
 // const person = {
 //   name: 'Vladimir',
 //   age: 52,
@@ -13,7 +13,7 @@
 //     if (!(prop in target)) {
 //       return prop
 //         .split('_')
-//         .map((p) => target[p])
+//         .map((map_prop) => target[map_prop])
 //         .join(' ')
 //     }
 //     return target[prop]
@@ -26,8 +26,9 @@
 //     }
 //   },
 //   has(target, prop) {
-//     // return ['age', 'name', 'job'].includes(prop)
-//     return ['age', 'job'].includes(prop)
+//     return ['age', 'name', 'job'].includes(prop)
+//     // return Object.keys(target).includes(prop)
+//     // return Object.values(target).includes(prop)
 //   },
 //   deleteProperty(target, prop) {
 //     console.log('Deleting...', prop)
@@ -36,7 +37,7 @@
 //   },
 // })
 
-// // Functions
+// TODO: Проксирование Functions
 // const log = (text) => `Log: ${text}`
 
 // const fp = new Proxy(log, {
@@ -47,7 +48,7 @@
 //   },
 // })
 
-// // Classes
+// TODO: Проксирование Classes
 // class Person {
 //   constructor(name, age) {
 //     this.name = name
@@ -70,11 +71,13 @@
 
 // const p = new PersonProxy('Maxim', 30)
 
-// Примеры работы с Proxy:
-// Wrapper
-const withDefaultValue = (target, defaultValue = 0) => {
+// TODO: Примеры работы с Proxy. Рассмотрим 3 разные составляющие Proxy:
+// TODO: Wrapper
+function withDefaultValue(target, defaultValue = 0) {
   return new Proxy(target, {
-    get: (obj, prop) => (prop in obj ? Object[prop] : defaultValue),
+    get(obj, prop) {
+      return prop in obj ? obj[prop] : defaultValue
+    },
   })
 }
 
@@ -83,12 +86,12 @@ const position = withDefaultValue(
     x: 24,
     y: 42,
   },
-  0
+  12
 )
 
 console.log(position)
 
-// Hidden properties
+// TODO: Hidden properties
 const withHiddenProps = (target, prefix = '_') => {
   return new Proxy(target, {
     has: (obj, prop) => prop in obj && !prop.startsWith(prefix),
@@ -103,7 +106,7 @@ const data = withHiddenProps({
   _uid: '1231231',
 })
 
-// Optimization
+// TODO: Optimization
 const userData = [
   { id: 11, name: 'Vladimir', job: 'Revolutionary', age: 52 },
   { id: 22, name: 'Elena', job: 'Student', age: 22 },
