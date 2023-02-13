@@ -43,3 +43,15 @@ const person2 = { id: 2, name: 'Iosif', job: 'General Secretary', age: 73 }
 
 bind(person1, bindLog)()
 bind(person2, bindLog)()
+
+function add(n) {
+  return function(num) {
+    console.log(num + n)
+  }
+}
+
+const addOne = add(1)
+const addTen = add(10)
+
+addOne(10)
+addTen(10)
