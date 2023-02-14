@@ -41,17 +41,71 @@ function bindLog() {
 const person1 = { id: 1, name: 'Vladimir', job: 'Revolutionary', age: 53 }
 const person2 = { id: 2, name: 'Iosif', job: 'General Secretary', age: 73 }
 
-bind(person1, bindLog)()
-bind(person2, bindLog)()
+// bind(person1, bindLog)()
+// bind(person2, bindLog)()
 
-function add(n) {
-  return function(num) {
-    console.log(num + n)
-  }
+// const title = 'HELLO'
+
+// const isVisible = () => Math.random() > 0.5
+
+// const template = `
+//   ${isVisible() ? `<p>Visible</p>` : ''}
+//   <h1 id='demo' style="color: red">${title}</h1>
+// `
+
+// console.log(template)
+
+// const str = 'Hello '
+
+// console.log(str.startsWith('He'))
+// console.log(str.startsWith('o'))
+// console.log(str.endsWith('lo '))
+// console.log(str.endsWith('He'))
+// console.log(str.includes('ell'))
+// console.log(str.repeat(3))
+// console.log(str.trim())
+// console.log(str.trimEnd())
+// console.log(str.trimStart())
+// console.log(str.padStart(10, '1234'))
+// console.log(str.padEnd(10, '*'))
+
+function average(arr) {
+  return arr.reduce((acc, i) => acc + i, 0) / arr.length
 }
+console.log(average([10, 20, 30, 40]))
 
-const addOne = add(1)
-const addTen = add(10)
+// TODO: Rest
+function average2(a, b, ...args) {
+  return args.reduce((acc, i) => acc + i, a + b) / (args.length + 2)
+}
+console.log(average2(10, 20, 30, 40))
 
-addOne(10)
-addTen(10)
+// TODO: Spread
+// const array = [1, 1, 2, 3, 5, 8, 13]
+// console.log(array)
+// console.log(...array)
+// console.log(Math.max(...array))
+// console.log(Math.min(...array))
+
+const cityField = 'city'
+
+const job = 'Schoolboy'
+
+const person = {
+  age: 14,
+  name: 'Egor',
+  job,
+  [cityField + Date.now()]: 'Minsk',
+  'country-live': 'Belarus',
+  print: () => 'Person',
+  toString() {
+    return Object.keys(this)
+      .filter((key) => key !== 'toString')
+      .map((key) => this[key])
+      .join(' ')
+  },
+}
+console.log(person)
+console.log(person.toString())
+console.log(person.print())
+
