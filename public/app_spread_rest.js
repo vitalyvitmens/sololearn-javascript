@@ -33,6 +33,35 @@ console.log(divs, Array.isArray(divs)) // false
 console.log(nodes, Array.isArray(nodes)) // true
 console.log(nodes)
 
+// TODO: Spread
+// const array = [1, 1, 2, 3, 5, 8, 13]
+// console.log(array)
+// console.log(...array)
+// console.log(Math.max(...array))
+// console.log(Math.min(...array))
+
+// const cityField = 'city'
+
+// const job = 'Schoolboy'
+
+// const person = {
+//   age: 14,
+//   name: 'Egor',
+//   job,
+//   [cityField + Date.now()]: 'Minsk',
+//   'country-live': 'Belarus',
+//   print: () => 'Person',
+//   toString() {
+//     return Object.keys(this)
+//       .filter((key) => key !== 'toString')
+//       .map((key) => this[key])
+//       .join(' ')
+//   },
+// }
+// console.log(person)
+// console.log(person.toString())
+// console.log(person.print())
+
 // TODO: Rest
 // Rest in function
 function sum(a, b, ...rest) {
@@ -58,3 +87,4 @@ const person = {
 
 const { name, age, ...addres } = person
 console.log(name, age, addres)
+
