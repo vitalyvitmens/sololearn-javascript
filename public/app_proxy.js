@@ -146,3 +146,53 @@ const users = new IndexArray([
   { id: 3, name: 'Lavrentiy', job: 'General Commissioner', age: 54 },
   { id: 4, name: 'Yuriy', job: 'Spaceman', age: 34 },
 ])
+
+// TODO: ES6 Proxy
+const validator = {
+  get(target, prop) {
+    return prop in target ? target[prop] : `Поля {${prop}} в объекте нет!`
+  },
+
+  set(target, prop, value) {
+    if (value.length > 2) {
+      Reflect.set(target, prop, value)
+    } else {
+      console.log(
+        `Длина должна быть больше двух символов, у Вас ${value.length} символа!`
+      )
+    }
+  },
+}
+
+const form = {
+  login: 'tester',
+  password: '12345',
+}
+
+const formProxy = new Proxy(form, validator)
+console.log(formProxy)
+console.log(formProxy.login)
+console.log(formProxy.password)
+console.log(formProxy['username'])
+
+formProxy.password = '12'
+// formProxy.password = '123'
+console.log(formProxy.password)
+
+function log(message) {
+  console.log(`[Log]: ${message}`)
+}
+
+const proxy = new Proxy(log, {
+  apply(target, thisArg, argArray) {
+    if (argArray.length === 1) {
+      Reflect.apply(target, thisArg, argArray)
+    } else {
+      console.log(`Количество аргументов ${argArray.length}, должен быть один!`)
+    }
+  },
+})
+
+proxy('Custom message')
+proxy()
+proxy('Custom message', 'Success')

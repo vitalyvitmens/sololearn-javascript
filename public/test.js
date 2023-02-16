@@ -81,7 +81,7 @@ const person2 = { id: 2, name: 'Iosif', job: 'General Secretary', age: 73 }
 // console.log(average2(10, 20, 30, 40))
 
 //TODO: Set
-const arr = [1, 1, 2, 3, 5, 8, 13, 13, 13, 5, 8]
+// const arr = [1, 1, 2, 3, 5, 8, 13, 13, 13, 5, 8]
 // const set = new Set(arr)
 // console.log(set)
 
@@ -93,12 +93,40 @@ const arr = [1, 1, 2, 3, 5, 8, 13, 13, 13, 5, 8]
 
 // console.log([1, 2, 3, 4, 4, 4, 5, 4, 1, 5, 4].filter((i) => i === unique(i)))
 
-// console.log(Array.from(new Set([1, 2, 1, 2, 3, 4, 5, 2, 4, 1, 1, 6]))) // [ 1, 2, 3, 4, 5, 6 ]
+// console.log([...(new Set([1, 2, 1, 2, 3, 4, 5, 2, 4, 1, 1, 6]))]) // [ 1, 2, 3, 4, 5, 6 ]
 
-const array = [1, 2, 1, 2, 3, 4, 5, 2, 4, 1, 1, 6];
+const arr1 = [1, 1, 2, 3, 5, 8, 13, 13, 13, 5, 8, 10]
+const arr2 = ['*', 'S', 'T', 'A', 'L', 'I', 'N', '*']
+const arr3 = ['!', '@', '#', '$', '%', '#', '!', '%']
+const arr4 = ['1', '1', '1', '1', '1', '1', '1', '1']
+const arr5 = [1, 1, 2, 3, 5, 8, 13, 13, 13, 5, 8, '10']
 
-const getUnique = (arr) => {
-  return arr.filter((el, ind) => ind === arr.indexOf(el));
-};
+function arrayDiffer(arr) {
+  const arrNonUniqValues = arr.filter((el, i) => i != arr.indexOf(el))
+  return arr.filter((i) => !arrNonUniqValues.includes(i))
+}
 
-console.log(getUnique(array)); // => [ 1, 2, 3, 4, 5, 6 ]
+console.log(arrayDiffer(arr1))
+console.log(arrayDiffer(arr2))
+console.log(arrayDiffer(arr3))
+console.log(arrayDiffer(arr4))
+console.log(arrayDiffer(arr5))
+
+const arrayDifference = (arr) =>
+  arr.filter((i) => !arr.filter((el, i) => i != arr.indexOf(el)).includes(i))
+
+console.log(arrayDifference(arr1))
+console.log(...arrayDifference(arr2))
+console.log(arrayDifference(arr3))
+console.log(arrayDifference(arr4))
+console.log(arrayDifference(arr5))
+
+let arrDifference = (arr) =>
+  arr.filter((i) => arr.indexOf(i) === arr.lastIndexOf(i))
+
+console.log(arrDifference(arr1))
+console.log(...arrDifference(arr2))
+console.log(arrDifference(arr3))
+console.log(arrDifference(arr4))
+console.log(arrDifference(arr5))
+
