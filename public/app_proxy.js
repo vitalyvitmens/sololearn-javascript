@@ -90,7 +90,7 @@ const position = withDefaultValue(
 )
 
 console.log(position)
-
+// =============================================================================
 // TODO: Hidden properties
 const withHiddenProps = (target, prefix = '_') => {
   return new Proxy(target, {
@@ -105,7 +105,7 @@ const data = withHiddenProps({
   age: 52,
   _uid: '1231231',
 })
-
+// =============================================================================
 // TODO: Optimization
 const userData = [
   { id: 11, name: 'Vladimir', job: 'Revolutionary', age: 52 },
@@ -116,7 +116,8 @@ const userData = [
 
 const index = {}
 userData.forEach((i) => (index[i.id] = i))
-
+console.log(index)
+// =============================================================================
 const IndexArray = new Proxy(Array, {
   construct(target, [args]) {
     const index = {}
@@ -146,7 +147,7 @@ const users = new IndexArray([
   { id: 3, name: 'Lavrentiy', job: 'General Commissioner', age: 54 },
   { id: 4, name: 'Yuriy', job: 'Spaceman', age: 34 },
 ])
-
+// =============================================================================
 // TODO: ES6 Proxy
 const validator = {
   get(target, prop) {
@@ -158,7 +159,7 @@ const validator = {
       Reflect.set(target, prop, value)
     } else {
       console.log(
-        `Длина должна быть больше двух символов, у Вас ${value.length} символа!`
+        `Длина должна быть 3 и больше символов, у Вас ${value.length} символа!`
       )
     }
   },
@@ -178,7 +179,7 @@ console.log(formProxy['username'])
 formProxy.password = '12'
 // formProxy.password = '123'
 console.log(formProxy.password)
-
+// =============================================================================
 function log(message) {
   console.log(`[Log]: ${message}`)
 }
@@ -196,3 +197,4 @@ const proxy = new Proxy(log, {
 proxy('Custom message')
 proxy()
 proxy('Custom message', 'Success')
+// =============================================================================

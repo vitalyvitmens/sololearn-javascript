@@ -26,3 +26,17 @@ function uniqValue(array) {
 
 console.log(uniqValue([1, 12, 2, 4, 4, 4, 4, 4, 5, 6, 6, 6]))
 
+//TODO: Set
+// const arr = [1, 1, 2, 3, 5, 8, 13, 13, 13, 5, 8]
+// const set = new Set(arr)
+// console.log(set)
+
+// for (let i of arr) {
+//   if (unique(i)) {
+//     console.log(i)
+//   }
+// }
+
+// console.log([1, 2, 3, 4, 4, 4, 5, 4, 1, 5, 4].filter((i) => i === unique(i)))
+
+// console.log([...(new Set([1, 2, 1, 2, 3, 4, 5, 2, 4, 1, 1, 6]))]) // [ 1, 2, 3, 4, 5, 6 ]

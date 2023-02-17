@@ -40,28 +40,6 @@ console.log(nodes)
 // console.log(Math.max(...array))
 // console.log(Math.min(...array))
 
-// const cityField = 'city'
-
-// const job = 'Schoolboy'
-
-// const person = {
-//   age: 14,
-//   name: 'Egor',
-//   job,
-//   [cityField + Date.now()]: 'Minsk',
-//   'country-live': 'Belarus',
-//   print: () => 'Person',
-//   toString() {
-//     return Object.keys(this)
-//       .filter((key) => key !== 'toString')
-//       .map((key) => this[key])
-//       .join(' ')
-//   },
-// }
-// console.log(person)
-// console.log(person.toString())
-// console.log(person.print())
-
 // TODO: Rest
 // Rest in function
 function sum(a, b, ...rest) {
@@ -88,3 +66,8 @@ const person = {
 const { name, age, ...addres } = person
 console.log(name, age, addres)
 
+// TODO: Rest
+function average2(a, b, ...args) {
+  return args.reduce((acc, i) => acc + i, a + b) / (args.length + 2)
+}
+console.log(average2(10, 20, 30, 40))
