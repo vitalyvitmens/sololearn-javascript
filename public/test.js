@@ -78,3 +78,36 @@ console.log(...arrDifference(arr2))
 console.log(arrDifference(arr3))
 console.log(arrDifference(arr4))
 console.log(arrDifference(arr5))
+// =============================================================================
+// const array = ['Javascript', 'is', 'Awesome']
+// array.push('!')
+// // array.shift('!')
+// array[0] = 'JS'
+// console.log(array)
+// =============================================================================
+// function createFrameworkManager() {
+//   const fw = ['Angular', 'React']
+
+//   return {
+//     print: function() {
+//       console.log(fw.join(' '))
+//     },
+//     add: function(framework) {
+//       fw.push(framework)
+//     }
+//   }
+// }
+
+// const manager = createFrameworkManager()
+// manager.print()
+// manager.add('VueJS')
+// manager.print()
+// =============================================================================
+const fib = [1, 1, 2, 3, 5, 8, 13]
+
+for (let i of fib) {
+  setTimeout(() => {
+    console.log(i)
+  }, 1000)
+}
+// =============================================================================
