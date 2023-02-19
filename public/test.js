@@ -55,29 +55,29 @@ function arrayDiffer(arr) {
   return arr.filter((i) => !arrNonUniqValues.includes(i))
 }
 
-console.log(arrayDiffer(arr1))
-console.log(...arrayDiffer(arr2))
-console.log(arrayDiffer(arr3))
-console.log(arrayDiffer(arr4))
-console.log(arrayDiffer(arr5))
+// console.log(arrayDiffer(arr1))
+// console.log(...arrayDiffer(arr2))
+// console.log(arrayDiffer(arr3))
+// console.log(arrayDiffer(arr4))
+// console.log(arrayDiffer(arr5))
 
 const arrayDifference = (arr) =>
   arr.filter((i) => !arr.filter((el, i) => i !== arr.indexOf(el)).includes(i))
 
-console.log(arrayDifference(arr1))
-console.log(...arrayDifference(arr2))
-console.log(arrayDifference(arr3))
-console.log(arrayDifference(arr4))
-console.log(arrayDifference(arr5))
+// console.log(arrayDifference(arr1))
+// console.log(...arrayDifference(arr2))
+// console.log(arrayDifference(arr3))
+// console.log(arrayDifference(arr4))
+// console.log(arrayDifference(arr5))
 
 let arrDifference = (arr) =>
   arr.filter((i) => arr.indexOf(i) === arr.lastIndexOf(i))
 
-console.log(arrDifference(arr1))
-console.log(...arrDifference(arr2))
-console.log(arrDifference(arr3))
-console.log(arrDifference(arr4))
-console.log(arrDifference(arr5))
+// console.log(arrDifference(arr1))
+// console.log(...arrDifference(arr2))
+// console.log(arrDifference(arr3))
+// console.log(arrDifference(arr4))
+// console.log(arrDifference(arr5))
 // =============================================================================
 // const array = ['Javascript', 'is', 'Awesome']
 // array.push('!')
@@ -107,7 +107,44 @@ const fib = [1, 1, 2, 3, 5, 8, 13]
 
 for (let i of fib) {
   setTimeout(() => {
-    console.log(i)
+    // console.log(i)
   }, 1000)
 }
 // =============================================================================
+// const obj = {
+//   name: 'Egor',
+//   age: 14,
+// }
+
+// const proxy = new Proxy(obj, {
+//   get(target, prop) {
+//     return prop in target ? target[prop] : `Поля {${prop}} в объекте нет!`
+//   },
+//   set(target, prop, value) {
+//     if (prop in target) {
+//       target[prop] = value
+//     } else {
+//       console.log(`Нет ${prop} в объекте ${target}`)
+//     }
+//   }
+// })
+
+// console.log(proxy.name)
+// proxy.age = 15
+// proxy.age2 = 15
+// console.log(proxy.age)
+// console.log(proxy.age2)
+// =============================================================================
+
+const first = () => console.log('First')
+const second = () => console.log('Second')
+const third = () => console.log('Third')
+
+first()
+setTimeout(second, 0)
+third()
+first()
+first()
+first()
+first()
+first()
