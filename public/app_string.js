@@ -13,6 +13,11 @@ console.log(template)
 // =============================================================================
 const str = 'Hello '
 
+console.log(str.length)
+console.log(str.toUpperCase())
+console.log(str.toLowerCase())
+console.log(str.charAt(1))
+console.log(str.indexOf('ello'))
 console.log(str.startsWith('He'))
 console.log(str.startsWith('o'))
 console.log(str.endsWith('lo '))
