@@ -1,3 +1,73 @@
+const cars = ['БМВ', 'Мазда', 'Мерседес', 'Порше']
+cars.unshift('Ауди')
+const firstitem = cars.shift() // удаляет первый элемент массива
+console.log(`firstItem: ${firstitem}`)
+cars.push('Форд')
+
+function addItemToEnd(arr, item) {
+  return arr.push(item)
+}
+
+addItemToEnd(cars, 'Ягуар')
+
+const lastItem = cars.pop() // удаляет последний элемент массива
+console.log(`lastItem: ${lastItem}`)
+
+const fib = [1, 1, 2, 3, 5, 8, 13, 21]
+for (let car of cars) {
+  console.log(car)
+}
+
+console.log(cars.reverse())
+
+// Задача 1 (необходимо перевернуть строку)
+const text = 'Привет, мы изучаем JavaScript'
+console.log(text.split('').reverse().join(''))
+
+const index = cars.indexOf('БМВ')
+if (index in cars) {
+  cars[index] = 'BMW'
+} else {
+  console.log(`Нет такого индекса в массиве cars`)
+}
+console.log(`index: №${index} = ${cars[index]}`)
+console.log(cars)
+
+for (let i of fib) {
+  console.log(i)
+}
+
+console.log(`${cars.includes('BMW')} (Есть ли в массиве cars элемент BMW)`)
+console.log(`${cars.includes('Жига')} (Есть ли в массиве cars элемент Жига)`)
+
+console.log(cars.join(' ').toUpperCase())
+const upperCaseCars = cars.map((car) => car.toUpperCase())
+console.log(upperCaseCars)
+console.log(cars)
+
+const pow2Arr = fib.map((num) => num ** 2)
+console.log(pow2Arr)
+console.log(`Возводим в квадрат элементы массива fib: ${pow2Arr}`)
+
+const pow2 = (num) => num ** 2
+const sqrt_05 = (num) => num ** 0.5
+
+const sqrtArr = pow2Arr.map(sqrt_05).map(pow2).map(Math.sqrt)
+console.log(sqrtArr)
+console.log(`Извлекаем квадратный корень из элементов массива fib: 
+Возводим в квадрат элементы массива fib:
+Снова извлекаем квадратный корень из элементов массива fib:
+${sqrtArr}`)
+
+const filter = fib.filter((num) => !(num % 2))
+console.log(`Числа из массива fib которые деляться на 2 без остатка: ${filter}`)
+
+const filterMore = fib.filter((num) => num > 5)
+console.log(`Числа из массива fib которые > 5: ${filterMore}`)
+
+const res = fib.reduce((acc, num) => (acc += num), 0)
+console.log(res)
+
 const people = [
   { name: 'Vladimir', age: 53, budget: 40000 },
   { name: 'Iosif', age: 73, budget: 6900 },
@@ -6,6 +76,36 @@ const people = [
   { name: 'Egor', age: 14, budget: 300 },
   { name: 'Arina', age: 20, budget: 1000 },
 ]
+
+let findedPerson
+for (const person of people) {
+  if (person.budget === 300) {
+    findedPerson = person
+    console.log(findedPerson)
+    console.log(findedPerson.name)
+  }
+}
+
+const index_object = people.findIndex(function (person) {
+  return person.budget === 300
+})
+console.log(people[index_object])
+console.log(people[index_object].name)
+
+const person_object = people.find(function (person) {
+  return person.budget === 300
+})
+console.log(person_object)
+console.log(person_object.name)
+
+const person_object_2 = people.find((person) => person.budget === 300)
+console.log(person_object_2)
+console.log(person_object_2.name)
+
+const allBudget = people
+  .filter((person) => person.budget < 2000)
+  .reduce((acc, person) => (acc += person.budget), 0)
+console.log(allBudget)
 
 // // ES5
 // for (let i = 0; i < people.length; i++) {
@@ -89,7 +189,7 @@ const nA = people
       budget: p.budget,
     }
   })
-  // .reduce((acc, p) => acc + p.budget, 0)
+// .reduce((acc, p) => acc + p.budget, 0)
 console.log(nA)
 
 // console.log(Object.values(people))

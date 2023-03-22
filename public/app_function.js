@@ -22,7 +22,7 @@ const interval = setInterval(function () {
   } else {
     console.log(++counter)
   }
-}, 1000)
+}, 100)
 
 // Стрелочные функции
 // Преобразуем функцию Declaration ниже в стрелочные функции
@@ -44,3 +44,27 @@ const pow2 = (num) => num ** 2
 console.log(pow2(5))
 
 // Параметры по умолчанию
+const sum = (a = 41, b = a * 2) => a + b
+console.log(sum())
+console.log(sum(41, 1))
+
+function sumAll(...all) {
+  let result = 0
+  for (let num of all) {
+    result += num
+  }
+  return result
+}
+
+const res = sumAll(1, 2, 3, 4, 5)
+console.log(res)
+
+// Замыкания
+function createMember(name) {
+  return function (lastname) {
+    console.log(`${name} ${lastname}`)
+  }
+}
+
+const logWithLastName = createMember('Vladimir')
+logWithLastName('Lenin')
