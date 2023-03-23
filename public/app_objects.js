@@ -42,8 +42,12 @@ const person = {
 // const name = person.name
 // const age = person.age
 // const languages = person.languages
-// const { name: personName = 'Влад', age, languages } = person // лучшая запись того что выше, с возможностью переименования переменных и присвоения значения в случае undefind
-// console.log(personName, age, languages)
+// TODO: Деструктуризация
+// const {name, age, languages} = person
+// console.log(name, age, languages)
+
+// const { name: personName = 'Влад', age: personAge = 0, languages: personLanguages = ['ru'] } = person // лучшая запись того что выше, с возможностью переименования переменных и присвоения значения в случае undefind
+// console.log(personName, personAge, personLanguages)
 
 // console.log(person)
 
@@ -57,14 +61,14 @@ const person = {
 
 // console.log(person)
 
-// Object.keys(person).forEach((key) => {
-//   console.log('key:', key),
-//   console.log('value:', person[key])
-// })
+Object.keys(person).forEach((key) => {
+  console.log('key:', key),
+  console.log('value:', person[key])
+})
 
-// Object.values(person).forEach((value) => {
-//   console.log('value:', value)
-// })
+Object.values(person).forEach((value) => {
+  console.log('value:', value)
+})
 
 // TODO: Context
 // person.info()

@@ -29,16 +29,16 @@ const delay = (wait = 1000) => {
   return promise
 }
 
-// delay(2000)
-//   .then(() => {
-//     console.log('After 2 second')
-//   })
-//   .catch((err) => {
-//     console.error('Error:', err)
-//   })
-//   .finally(() => {
-//     console.log('Finally')
-//   })
+delay(2000)
+  .then(() => {
+    console.log('After 2 second')
+  })
+  .catch((err) => {
+    console.error('Error:', err)
+  })
+  .finally(() => {
+    console.log('Finally')
+  })
 
 const getData = () => new Promise((resolve) => resolve([1, 1, 2, 3, 5, 8, 13]))
 
